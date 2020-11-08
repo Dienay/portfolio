@@ -1,0 +1,42 @@
+#projetos {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+#projetos > h2 {
+    color: #4EACCF;
+    margin-bottom: 24px;
+}
+
+.projeto {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.projeto div {
+    width: 400px;
+}
+
+.projeto img:nth-child(odd){
+    margin-right: 50px;
+}
+
+.projeto img:nth-child(even){
+    margin-left: 50px;
+}
+
+.projeto h3 {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.projeto p {
+    margin-bottom: 16px;
+}
+
+.mais-projetos {
+    background-color: #063447;
+}

@@ -13,6 +13,10 @@ li {
     list-style: none;
 }
 
+p {
+    font-size: 14px;
+}
+
 .botao {
     background-color: #4EACCF;
     border-radius: 8px;
