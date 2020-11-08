@@ -4,6 +4,7 @@ header {
     background-attachment: fixed;
     background-size: cover;
     background-position: 100%;
+    color: #fff;
     height: 100vh;
 }
 
@@ -13,7 +14,6 @@ header {
 }
 
 #headline {
-    color: #fff;
     display: flex;
     justify-content: space-between;
     padding: 16px;
@@ -25,7 +25,6 @@ header {
 }
 
 #quem-sou {
-    color: #fff;
     align-items: center;
     display: flex;
     height: 80%;

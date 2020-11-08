@@ -1,15 +1,36 @@
 #sobre {
     align-items: center;
     background-color: #063447;
+    color: #fff;
     display: flex;
-    height: 80vh;
-    justify-content: space-evenly;
+    height: 70vh;
+    justify-content: center;
 }
 
 #sobre img {
-    width: 350px;
+    width: 300px;
 }
 
 #resumo {
-    width: 400px;
+    width: 450px;
+    margin-left: 80px;
+}
+
+#resumo p {
+    margin: 24px 0;
+    font-size: 14px;
+}
+
+#resumo ul {
+    margin-bottom: 24px;
+}
+
+#resumo li {
+    display: inline;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+#resumo li:first-child {
+    margin: 0;
 }

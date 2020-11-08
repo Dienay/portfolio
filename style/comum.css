@@ -12,3 +12,12 @@ body {
 li {
     list-style: none;
 }
+
+.botao {
+    background-color: #4EACCF;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 24px;
+}
