@@ -1,0 +1,34 @@
+#habilidades {
+    align-items: center;
+    background-color: #4EACCF;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh;
+}
+
+#habilidades h2 {
+    margin-bottom: 32px;
+}
+
+#fullstack {
+    display: flex;
+    justify-content: center;
+}
+
+.stack {
+    width: 350px;
+}
+
+.stack:first-child {
+    margin-right: 80px;
+}
+
+.stack h1 {
+    margin-bottom: 16px;
+}
+
+.stack p {
+    margin-bottom: 16px;
+}
