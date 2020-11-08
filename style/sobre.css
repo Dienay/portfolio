@@ -1,0 +1,15 @@
+#sobre {
+    align-items: center;
+    background-color: #063447;
+    display: flex;
+    height: 80vh;
+    justify-content: space-evenly;
+}
+
+#sobre img {
+    width: 350px;
+}
+
+#resumo {
+    width: 400px;
+}
