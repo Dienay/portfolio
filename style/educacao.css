@@ -3,17 +3,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #292929;
+    background-color: var(--cor-bg-escuro);
     padding: 40px 0;
 }
 
 #educacao h2 {
-    color: #fff;
+    color: var(--cor-bg-claro);
     margin-bottom: 24px;
 }
 
 .curso {
-    background-color: #fff;
+    background-color: var(--cor-bg-claro);
     border-radius: 8px;
     height: 300px;
     padding: 24px;

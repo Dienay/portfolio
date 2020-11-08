@@ -6,7 +6,7 @@
 }
 
 #projetos > h2 {
-    color: #4EACCF;
+    color: var(--cor-bg-principal);
     margin-bottom: 24px;
 }
 
@@ -38,5 +38,5 @@
 }
 
 .mais-projetos {
-    background-color: #063447;
+    background-color: var(--cor-bg-secundaria);
 }

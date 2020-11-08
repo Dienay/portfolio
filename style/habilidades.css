@@ -1,7 +1,7 @@
 #habilidades {
     align-items: center;
-    background-color: #4EACCF;
-    color: #fff;
+    background-color: var(--cor-bg-principal);
+    color: var(--cor-bg-claro);
     display: flex;
     flex-direction: column;
     justify-content: center;

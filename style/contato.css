@@ -1,7 +1,7 @@
 #contato {
     align-items: center;
-    background-color: #063447;
-    color: #fff;
+    background-color: var(--cor-bg-secundaria);
+    color: var(--cor-bg-claro);
     display: flex;
     flex-direction: column;
     padding: 40px 0;
