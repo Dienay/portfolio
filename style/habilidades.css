@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 60vh;
+    padding: 40px 0;
 }
 
 #habilidades h2 {
@@ -31,4 +31,6 @@
 
 .stack p {
     margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
 }
