@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --cor-bg-principal: #4EACCF;
+    --cor-bg-secundaria: #063447;
+    --cor-bg-claro: #fff;
+    --cor-bg-escuro: #292929;
 }
 
 body {
@@ -18,10 +23,18 @@ p {
 }
 
 .botao {
-    background-color: #4EACCF;
+    background-color: var(--cor-bg-principal);
     border-radius: 8px;
     border: none;
-    color: #fff;
+    color: var(--cor-bg-claro);
+    cursor: pointer;
     font-size: 12px;
     padding: 4px 24px;
+    outline: none;
 }
+
+.botao:hover {
+    background-color: #0076a1;
+    transition: 400ms;
+}
+
