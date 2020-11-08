@@ -38,3 +38,8 @@ p {
     transition: 400ms;
 }
 
+footer {
+    background-color: var(--cor-bg-principal);
+    color: var(--cor-bg-claro);
+    padding: 8px 80px;
+}
