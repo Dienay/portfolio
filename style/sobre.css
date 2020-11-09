@@ -8,8 +8,9 @@
 }
 
 #sobre img {
-    width: 100px;
     border-radius: 50%;
+    display: none;
+    width: 100px;
 }
 
 figure {
@@ -42,15 +43,19 @@ figure {
 }
 
 @media screen and (min-width: 800px) {
-    #sobre {
-        align-items: center;
-        background-color: var(--cor-bg-secundaria);
-        color: var(--cor-bg-claro);
-        display: flex;
-        padding: 40px 0;
-        justify-content: center;
+    #sobre img {
+        display: inherit;
+        width: 250px;
     }
 
+    #resumo {
+        width: 350px;
+        margin-left: 80px;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
     #sobre img {
         width: 300px;
     }
@@ -59,5 +64,4 @@ figure {
         width: 450px;
         margin-left: 80px;
     }
-
 }

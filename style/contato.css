@@ -13,7 +13,8 @@
 }
 
 #contato div {
-    width: 450px;
+    width: 80vw;
+    max-width: 450px;
 }
 
 #contato p {
@@ -34,3 +35,4 @@
     display: inline;
     margin: 16px;
 }
+
