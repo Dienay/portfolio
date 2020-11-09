@@ -24,3 +24,7 @@
     margin: 16px 0;
     font-size: 12px;
 }
+
+.curso p:last-child {
+    margin-top: 8px;
+}
