@@ -13,11 +13,8 @@
 }
 
 .stack {
-    width: 350px;
-}
-
-.stack:first-child {
-    margin-right: 80px;
+    width: 80vw;
+    max-width: 350px;
 }
 
 .stack h1 {
@@ -34,5 +31,9 @@
     #fullstack {
         display: flex;
         justify-content: center;
+    }
+    
+    .stack:first-child {
+        margin-right: 40px;
     }
 }
