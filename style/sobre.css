@@ -3,17 +3,23 @@
     background-color: var(--cor-bg-secundaria);
     color: var(--cor-bg-claro);
     display: flex;
-    padding: 40px 0;
+    padding: 20px 0;
     justify-content: center;
 }
 
 #sobre img {
-    width: 300px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+figure {
+    align-self: start;
 }
 
 #resumo {
-    width: 450px;
-    margin-left: 80px;
+    margin-left: 16px;
+    width: 70vw;
+    min-width: 300px;
 }
 
 #resumo p {
@@ -33,4 +39,25 @@
 
 #resumo li:first-child {
     margin: 0;
+}
+
+@media screen and (min-width: 800px) {
+    #sobre {
+        align-items: center;
+        background-color: var(--cor-bg-secundaria);
+        color: var(--cor-bg-claro);
+        display: flex;
+        padding: 40px 0;
+        justify-content: center;
+    }
+
+    #sobre img {
+        width: 300px;
+    }
+
+    #resumo {
+        width: 450px;
+        margin-left: 80px;
+    }
+
 }
