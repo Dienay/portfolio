@@ -1,16 +1,72 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@primary-color: #eb5424;
+@light-color: #ffffff;
+@text-color: #5f5f5f;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --cor-bg-principal: #4eaccf;
-  --cor-bg-secundaria: #063447;
-  --cor-bg-claro: #fff;
-  --cor-bg-escuro: #292929;
-  
+
   body {
-    font-family: "Montserrat", sans-serif;
-    color: #5f5f5f;
+    font-family: "Roboto", sans-serif;
+    color: @text-color;
+  }
+}
+
+#text-theme {
+  .default() {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .title-h1 {
+    font-size: 48px;
+
+    .default();
+  }
+
+  .title-h2 {
+    font-size: 32px;
+
+    .default();
+  }
+
+  .title-h3 {
+    font-size: 24px;
+
+    .default();
+  }
+
+  .description() {
+    font-size: 16px;
+  }
+}
+
+#theme-button {
+  .default() {
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 50px;
+    transition: all 0.6s ease-in;
+  }
+
+  .primary() {
+    background: @primary-color;
+
+    .default();
+  }
+
+  .secondary() {
+    .default();
+  }
+
+  .hover() {
+    background: @light-color;
+    color: @primary-color;
   }
 }
