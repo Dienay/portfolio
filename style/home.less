@@ -1,43 +1,108 @@
 @import "common";
 
-.b-home {
-  background: url(../images/home-bg.jpg);
-  background-size: cover;
+.c-home {
+  align-items: center;
   background-attachment: fixed;
   background-position: center center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-size: cover;
+  background-image: url(../img/desk-bg.jpg);
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr;
   height: 100vh;
+  justify-content: center;
 
-  &__container {
-    text-align: center;
+  &__social {
+    background-color: @light-color;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 7px 24px 0 rgba(@dark-color, 50%);
+    left: 0;
+    padding: 8px;
+    position: absolute;
+    z-index: 0;
+
+    &-item {
+      border-radius: 2px;
+      padding: 8px;
+      transition: background-color 0.5s ease-out;
+
+      &:hover {
+        background-color: @text-color;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-link {
+      display: block;
+      height: 32px;
+      width: 32px;
+    }
+
+    &-icon {
+      display: block;
+      height: 32px;
+      width: 32px;
+    }
   }
 
-  &__title {
-    font-family: 'Montserrat', sans-serif;
+  &__content {
+    height: 100%;
+    width: 100%;
+    padding: 32px;
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-column-end: 3;
+    grid-column-start: 1;
+    justify-content: center;
     
-    #text-theme.title-h1;
-  }
+    &-title {
+      font-family: "Montserrat", sans-serif;
+      color: @primary-color;
+  
+      #text-theme.title-h1;
+    }
+  
+    &-subtitle {
+      #text-theme.title-h2;
+    }
 
-  &__subtitle {
+    &-title, &-subtitle{
+      padding: 0 8px
+    }
+  }
+}
+
+.c-image__profile {
+  display: flex;
+  justify-content: end;
+  height: 100%;
+  padding: 32px;
+
+  &>img {
+    border: 1px solid rgba(@dark-color, 60%);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+}
+
+.c-about {
+  grid-column-start: 2;
+  height: 100%;
+  width: 100%;
+  padding: 32px;
+  font-family: "Montserrat", sans-serif;
+
+  &__capital {
+    font-size: 42px;
     color: @primary-color;
-    padding-bottom: 40px;
-
-    #text-theme.title-h2;
-  }
-
-  &__description {
-    #text-theme.description();
-  }
-
-  &__button {
-    margin-top: 30px;
-
-    #theme-button.primary;
-  }
-
-  &__button:hover {
-    #theme-button.hover;
   }
 }
