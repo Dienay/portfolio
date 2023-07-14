@@ -28,7 +28,7 @@
       transition: background-color 0.5s ease-out;
 
       &:hover {
-        background-color: @text-color;
+        background-color: rgba(@dark-color, 50%);
       }
 
       &:last-child {
@@ -80,12 +80,26 @@
 
 @media (max-width: 768px) {
   .c-home {
-    &__social {
-      display: none;
-    }
+    display: block;
+    height: calc(100vh - 58px);
 
     &__content {
-      padding-top: 58px;
+      margin-top: 58px;
+      padding-top: 32px;
+      height: calc(40vh - 58px);
+    }
+
+    &__social {
+      position: inherit;
+      grid-column-end: 3;
+      grid-column-start: 1;
+      
+      &-list {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 48px;
+      }
     }
   }
 }
@@ -116,6 +130,7 @@
   width: 100%;
   padding: 32px;
   font-family: "Montserrat", sans-serif;
+  height: calc(60vh - 64px);
 
   &__capital {
     font-size: 42px;
