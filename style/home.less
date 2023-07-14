@@ -127,10 +127,28 @@
   font-family: "Montserrat", sans-serif;
   grid-column-start: 2;
   padding: 32px;
+  height: 100%;
+  max-width: 520px;
 
   &__capital {
     #text-theme.title-h1();
     color: @primary-color;
+  }
+
+  &__description {
+    text-align: justify;
+    #text-theme.text();
+  }
+
+  &__source-code {
+    color: @primary-color;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 500;
+    
+    &:hover {
+      color: green;
+    }
   }
 }
 
