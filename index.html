@@ -157,26 +157,26 @@
     <!-- Lida com menu hamburguer -->
     <script>
       (function () {
-        const headerElement = document.querySelector('.c-header');
-        const handleNavBar = document.querySelector('.c-header__navbar-collapse');
+        const headerElement = document.querySelector(".c-header");
+        const handleNavBar = document.querySelector(
+          ".c-header__navbar-collapse"
+        );
 
-        headerElement.addEventListener('click', function(event) {
-          if(
-            event.target.classList.contains('c-header__button')
-            ||
-            event.target.classList.contains('button-icon')
+        headerElement.addEventListener("click", function (event) {
+          if (
+            event.target.classList.contains("c-header__button") ||
+            event.target.classList.contains("button-icon")
           ) {
-            handleNavBar.classList.toggle('c-header__navbar-collapse--open');
+            handleNavBar.classList.toggle("c-header__navbar-collapse--open");
           }
-          
-          if(
-            event.target.classList.contains('c-header__nav-link')
-            &&
-            handleNavBar.classList.contains('c-header__navbar-collapse--open')
+
+          if (
+            event.target.classList.contains("c-header__nav-link") &&
+            handleNavBar.classList.contains("c-header__navbar-collapse--open")
           ) {
-              handleNavBar.classList.remove('c-header__navbar-collapse--open');
+            handleNavBar.classList.remove("c-header__navbar-collapse--open");
           }
-        })
+        });
       })();
     </script>
   </body>
