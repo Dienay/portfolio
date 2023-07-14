@@ -1,26 +1,46 @@
+@import "common";
+
 .c-skills {
-    height: 50vh;
-    margin-top: 56px;
-    padding: 32px;
+  height: max-content;
+  margin-top: 56px;
+  padding: 32px;
 
-    &__title {
-        text-align: center;
-    }
+  &__title {
+    text-align: center;
+    margin-bottom: 32px;
+  }
 
-    &__list {
-        display: flex;
-        justify-content: center;
-    }
+  &__list {
+    display: flex;
+    justify-content: space-evenly;
+  }
 
-    &__container-icon {
-        height: 56px;
-        width: 56px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  &__item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    &__icon {
-        width: 56px;
+    & > p {
+      font-family: @primary-font-family;
     }
+  }
+
+  &__container-icon {
+    border-radius: 4px;
+    overflow: hidden;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  &__container-less {
+    background-color: #214674;
+  }
+
+  &__icon {
+    width: 56px;
+  }
 }
