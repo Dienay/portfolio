@@ -28,7 +28,7 @@
       transition: background-color 0.5s ease-out;
 
       &:hover {
-        background-color: @text-color;
+        background-color: rgba(@dark-color, 50%);
       }
 
       &:last-child {
@@ -50,12 +50,10 @@
   }
 
   &__content {
+    padding: 32px;
+    padding-top: 54px;
     height: 100%;
     width: 100%;
-    padding: 32px;
-  }
-
-  &__content {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -80,6 +78,32 @@
   }
 }
 
+@media (max-width: 768px) {
+  .c-home {
+    display: block;
+    height: calc(100vh - 58px);
+
+    &__content {
+      margin-top: 58px;
+      padding-top: 32px;
+      height: calc(40vh - 58px);
+    }
+
+    &__social {
+      position: inherit;
+      grid-column-end: 3;
+      grid-column-start: 1;
+      
+      &-list {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 48px;
+      }
+    }
+  }
+}
+
 .c-image__profile {
   display: flex;
   justify-content: end;
@@ -94,15 +118,29 @@
   }
 }
 
+@media (max-width: 768px) {
+  .c-image__profile {
+    display: none;
+  }
+}
+
 .c-about {
   grid-column-start: 2;
   height: 100%;
   width: 100%;
   padding: 32px;
   font-family: "Montserrat", sans-serif;
+  height: calc(60vh - 64px);
 
   &__capital {
     font-size: 42px;
     color: @primary-color;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-about {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
