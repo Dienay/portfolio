@@ -78,6 +78,18 @@
   }
 }
 
+@media (max-width: 768px) {
+  .c-home {
+    &__social {
+      display: none;
+    }
+
+    &__content {
+      padding-top: 58px;
+    }
+  }
+}
+
 .c-image__profile {
   display: flex;
   justify-content: end;
@@ -92,6 +104,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .c-image__profile {
+    display: none;
+  }
+}
+
 .c-about {
   grid-column-start: 2;
   height: 100%;
@@ -102,5 +120,12 @@
   &__capital {
     font-size: 42px;
     color: @primary-color;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-about {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
