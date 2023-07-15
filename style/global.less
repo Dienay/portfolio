@@ -3,7 +3,8 @@
 @primary-color: #307ac8;
 @light-color: #ffffff;
 @text-color: #292c2f;
-@dark-color: #3c424a;
+@dark-color: #09293D;
+@highlight-color: #28D4D2;
 
 @default-font-family:  "Roboto", sans-seri;
 @primary-font-family:  "Montserrat", sans-seri;
@@ -27,7 +28,8 @@ html {
 
 #text-theme {
   .default() {
-    font-weight: bold;
+    font-family: @primary-font-family;
+    font-weight: 400;
   }
 
   .title-h1 {
@@ -45,6 +47,10 @@ html {
   .title-h3 {
     font-size: 24px;
 
+    .default();
+  }
+
+  .subtitle {
     .default();
   }
 

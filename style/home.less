@@ -1,4 +1,4 @@
-@import "common";
+@import "global";
 
 .c-home {
   align-items: center;
@@ -8,23 +8,20 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
+  // display: none;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr 1.5fr;
   justify-content: center;
   min-height: 100vh;
 
   &__content {
-    align-items: center;
-    display: grid;
-    flex-direction: column;
     grid-column-end: 3;
     grid-column-start: 1;
-    justify-content: center;
+    justify-self: center;
     padding: 32px;
     
     &-title {
       color: @primary-color;
-      font-family: "Montserrat", sans-serif;
   
       #text-theme.title-h1;
     }
@@ -103,17 +100,38 @@
   }
 }
 
-.c-image__profile {
-  display: flex;
+.c-profile {
+  display: grid;
   height: 100%;
   justify-content: end;
+  align-content: start;
   padding: 32px;
 
-  &>img {
+  &__image {
     border-radius: 50%;
     border: 1px solid rgba(@dark-color, 60%);
     height: 200px;
     width: 200px;
+  }
+
+  &__occupation {
+    text-align: right;
+    margin-top: 24px;
+    
+    &-title {
+      text-transform: uppercase;
+      color: @primary-color;
+      font-size: 18px;
+      margin-bottom: 8px;
+
+      #text-theme.subtitle();
+    }
+
+    &-work {
+      font-weight: 400;
+
+      #text-theme.subtitle();
+    }
   }
 }
 
@@ -124,11 +142,11 @@
 }
 
 .c-about {
-  font-family: "Montserrat", sans-serif;
+  font-family: @primary-font-family;
   grid-column-start: 2;
   padding: 32px;
   height: 100%;
-  max-width: 520px;
+  max-width: 600px;
 
   &__capital {
     #text-theme.title-h1();
@@ -137,6 +155,7 @@
 
   &__description {
     text-align: justify;
+
     #text-theme.text();
   }
 
@@ -147,7 +166,7 @@
     font-weight: 500;
     
     &:hover {
-      color: green;
+      color: @highlight-color;
     }
   }
 }
