@@ -1,4 +1,4 @@
-@import "common";
+@import "global";
 
 .c-header {
   background-color: @dark-color;
@@ -8,14 +8,14 @@
   top: 0;
   width: 100%;
   z-index: 2;
-  
-  &>.container {
+
+  & > .container {
     align-items: center;
     display: grid;
-    grid-template-columns: .5fr 2fr;
+    grid-template-columns: 0.5fr 2fr;
   }
-  
-  &__logo{
+
+  &__logo {
     color: @light-color;
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
@@ -39,16 +39,16 @@
   }
 
   &__nav-link:hover {
-    color: @text-color;
+    color: @highlight-color;
   }
 }
 
 @media (max-width: 768px) {
   .c-header {
-    &>.container {
+    & > .container {
       justify-content: start;
     }
-  
+
     &__button {
       align-content: space-between;
       background-color: transparent;
@@ -59,18 +59,18 @@
       height: 26px;
       justify-self: end;
       padding: 4px;
-      
-      &> .button-icon {
+
+      & > .button-icon {
         background-color: @light-color;
         height: 2px;
         width: 32px;
       }
     }
-    
+
     &__button:hover {
       border-color: @text-color;
 
-      &> .button-icon {
+      & > .button-icon {
         background-color: @text-color;
       }
     }
@@ -94,7 +94,7 @@
       padding: 16px 0;
     }
 
-    &__nav-link{
+    &__nav-link {
       display: block;
       flex-grow: inherit;
       margin-left: 0;

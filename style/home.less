@@ -1,4 +1,4 @@
-@import "common";
+@import "global";
 
 .c-home {
   align-items: center;
@@ -8,33 +8,31 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
+  // display: none;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr 1.5fr;
   justify-content: center;
   min-height: 100vh;
 
   &__content {
-    align-items: center;
-    display: grid;
-    flex-direction: column;
     grid-column-end: 3;
     grid-column-start: 1;
-    justify-content: center;
+    justify-self: center;
     padding: 32px;
-    
+
     &-title {
       color: @primary-color;
-      font-family: "Montserrat", sans-serif;
-  
+
       #text-theme.title-h1;
     }
-  
+
     &-subtitle {
       #text-theme.title-h2;
     }
 
-    &-title, &-subtitle{
-      padding: 0 8px
+    &-title,
+    &-subtitle {
+      padding: 0 8px;
     }
   }
 
@@ -81,7 +79,7 @@
       grid-column-end: 3;
       grid-column-start: 1;
       position: relative;
-      
+
       &-list {
         align-items: flex-start;
         display: flex;
@@ -96,24 +94,45 @@
     &__content-title {
       #text-theme.title-h2();
     }
-    
+
     &__content-subtitle {
       #text-theme.title-h3();
     }
   }
 }
 
-.c-image__profile {
-  display: flex;
+.c-profile {
+  align-content: start;
+  display: grid;
   height: 100%;
   justify-content: end;
   padding: 32px;
 
-  &>img {
+  &__image {
     border-radius: 50%;
     border: 1px solid rgba(@dark-color, 60%);
     height: 200px;
     width: 200px;
+  }
+
+  &__occupation {
+    margin-top: 24px;
+    text-align: right;
+
+    &-title {
+      color: @primary-color;
+      font-size: 18px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+
+      #text-theme.subtitle();
+    }
+
+    &-work {
+      font-weight: 400;
+
+      #text-theme.subtitle();
+    }
   }
 }
 
@@ -124,11 +143,11 @@
 }
 
 .c-about {
-  font-family: "Montserrat", sans-serif;
+  font-family: @primary-font-family;
   grid-column-start: 2;
-  padding: 32px;
   height: 100%;
-  max-width: 520px;
+  max-width: 600px;
+  padding: 32px;
 
   &__capital {
     #text-theme.title-h1();
@@ -137,25 +156,26 @@
 
   &__description {
     text-align: justify;
+
     #text-theme.text();
   }
 
   &__source-code {
     color: @primary-color;
-    text-decoration: underline;
     font-size: 18px;
     font-weight: 500;
-    
+    text-decoration: underline;
+
     &:hover {
-      color: green;
+      color: @highlight-color;
     }
   }
 }
 
 @media (max-width: 768px) {
   .c-about {
-    grid-column-start: 1;
     grid-column-end: 3;
+    grid-column-start: 1;
   }
 }
 

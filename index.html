@@ -12,10 +12,11 @@
     <link rel="shortcut icon" href="img/favicon.png" />
 
     <!-- global styles -->
-    <link rel="stylesheet/less" type="text/css" href="style/common.less" />
+    <link rel="stylesheet/less" type="text/css" href="style/global.less" />
     <!-- styles -->
     <link rel="stylesheet/less" type="text/css" href="style/home.less" />
     <link rel="stylesheet/less" type="text/css" href="style/header.less" />
+    <link rel="stylesheet/less" type="text/css" href="style/skills.less" />
 
     <title>Dienay</title>
   </head>
@@ -32,10 +33,7 @@
         <nav class="c-header__navbar-collapse" id="navbarToggler">
           <ul class="c-header__nav-links">
             <li class="c-header__nav-item">
-              <a class="c-header__nav-link" href="#home">Home</a>
-            </li>
-            <li class="c-header__nav-item">
-              <a class="c-header__nav-link" href="#about">Quem sou</a>
+              <a class="c-header__nav-link" href="#home">Quem sou</a>
             </li>
             <li class="c-header__nav-item">
               <a class="c-header__nav-link" href="#work">O que faço</a>
@@ -62,30 +60,57 @@
     <!-- START HOME -->
     <section id="home" class="c-home">
       <section class="c-home__content">
-        <h1 class="c-home__content-title">
-          <strong>Dienay Lima</strong>
-        </h1>
-        <h2 class="c-home__content-subtitle">
-          Desenvolvedor Web Front-End
-        </h2>
+        <h1 class="c-home__content-title">Dienay Lima</h1>
       </section>
 
-      <section class="c-image__profile">
-        <img src="img/imagens/perfil.jpg" alt="Imagem de perfil do Dienay Lima">
+      <section class="c-profile">
+        <img
+          class="c-profile__image"
+          src="img/imagens/perfil.jpg"
+          alt="Imagem de perfil do Dienay Lima"
+        />
+        <div class="c-profile__occupation">
+          <h4 class="c-profile__occupation-title">Ocupações Atuais</h4>
+          <h4 class="c-profile__occupation-work">Desenvolvedor Front-End</h4>
+        </div>
       </section>
 
       <section class="c-about">
         <div class="c-about__container">
           <h2 class="c-about__capital">Olá,</h2>
           <p class="c-about__description">
-            meu nome é <strong>Dienay Lima</strong> e sou <strong>Desenvolvedor Front-End</strong> especializado na criação de soluções de interface interativas e responsivas. Sempre busco alcançar resultados esteticamente agradáveis e funcionais, considerando as necessidades dos usuários, os objetivos do negócio e a viabilidade técnica.
+            meu nome é <strong>Dienay Lima</strong> e sou
+            <strong>Desenvolvedor Front-End</strong> especializado na criação de
+            soluções de interface interativas e responsivas. Sempre busco
+            alcançar resultados esteticamente agradáveis e funcionais,
+            considerando as necessidades dos usuários, os objetivos do negócio e
+            a viabilidade técnica.
           </p>
-          <br>
-          <p class="c-about__description">Esta página em específico faz parte dos meus projetos pessoais, nos quais optei por utilizar apenas <strong>HTML</strong>, <strong>LESS</strong> e <strong>Javascript</strong>. Optei por não utilizar bibliotecas ou frameworks, pois acredito na importância de construir uma base sólida para a nossa evolução profissional.</p>
-          <br>
-          <p class="c-about__description">Se você quiser conferir o código-fonte deste projeto, <a class="c-about__source-code" href="https://github.com/Dienay/portfolio" target="_blank">clique aqui</a>.</p>
-          <br>
-          <p class="c-about__description">Veja também meus outros projetos <a class="c-about__source-code" href="" target="_blank">clicando aqui</a></p>
+          <br />
+          <p class="c-about__description">
+            Esta página em específico faz parte dos meus projetos pessoais, nos
+            quais optei por utilizar apenas <strong>HTML</strong>,
+            <strong>LESS</strong> e <strong>Javascript</strong>. Optei por não
+            utilizar bibliotecas ou frameworks, pois acredito na importância de
+            construir uma base sólida para a nossa evolução profissional.
+          </p>
+          <br />
+          <p class="c-about__description">
+            Se você quiser conferir o código-fonte deste projeto,
+            <a
+              class="c-about__source-code"
+              href="https://github.com/Dienay/portfolio"
+              target="_blank"
+              >clique aqui</a
+            >.
+          </p>
+          <br />
+          <p class="c-about__description">
+            Veja também meus outros projetos
+            <a class="c-about__source-code" href="" target="_blank"
+              >clicando aqui</a
+            >
+          </p>
         </div>
       </section>
 
@@ -119,6 +144,76 @@
       </section>
     </section>
     <!-- END HOME -->
+
+    <!-- START skills -->
+    <section class="c-skills" id="skills">
+      <div class="container">
+        <h2 class="c-skills__title">Minhas Skills</h2>
+        <ul class="c-skills__list">
+          <li class="c-skills__item">
+            <div class="c-skills__container-icon">
+              <img
+                class="c-skills__icon"
+                src="/img/icons/skills/javascript.svg"
+                alt=""
+              />
+            </div>
+            <p>Javascript</p>
+          </li>
+          <li class="c-skills__item">
+            <div class="c-skills__container-icon">
+              <img
+                class="c-skills__icon"
+                src="/img/icons/skills/next.svg"
+                alt=""
+              />
+            </div>
+            <p>NextJs</p>
+          </li>
+          <li class="c-skills__item">
+            <div class="c-skills__container-icon">
+              <img
+                class="c-skills__icon"
+                src="/img/icons/skills/react.svg"
+                alt=""
+              />
+            </div>
+            <p>ReactJs</p>
+          </li>
+          <li class="c-skills__item">
+            <div class="c-skills__container-icon c-skills__container-less">
+              <img
+                class="c-skills__icon"
+                src="/img/icons/skills/less.svg"
+                alt=""
+              />
+            </div>
+            <p>Less</p>
+          </li>
+          <li class="c-skills__item">
+            <div class="c-skills__container-icon">
+              <img
+                class="c-skills__icon"
+                src="/img/icons/skills/git.svg"
+                alt=""
+              />
+            </div>
+            <p>Git</p>
+          </li>
+          <li class="c-skills__item">
+            <div class="c-skills__container-icon">
+              <img
+                class="c-skills__icon"
+                src="/img/icons/skills/wordpress.svg"
+                alt=""
+              />
+            </div>
+            <p>WordPress</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- END skills -->
 
     <!-- Add LESS -->
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
