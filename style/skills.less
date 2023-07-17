@@ -15,32 +15,24 @@
   }
 
   &__list {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
-
-  &__item {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     text-align: center;
-  }
-
-  &__container-icon {
-    align-items: center;
-    border-radius: 4px;
     display: flex;
-    height: 56px;
-    justify-content: center;
-    margin-bottom: 8px;
-    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
-
+  
+  &__item {
+    display: grid;
+    grid-template-columns: 80px;
+    justify-content: center;
+    width: 80px;
   }
 
   &__icon {
+    border-radius: 4px;
     width: 56px;
+    height: 56px;
+    overflow: hidden;
   }
 }
 
