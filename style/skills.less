@@ -15,24 +15,28 @@
   }
 
   &__list {
-    text-align: center;
     display: flex;
     flex-wrap: wrap;
+    gap: 16px;
     justify-content: space-evenly;
+    text-align: center;
   }
-  
+
   &__item {
     display: grid;
-    grid-template-columns: 80px;
-    justify-content: center;
-    width: 80px;
+    min-width: max-content;
+    width: 88px;
+
+    p {
+      text-decoration: underline;
+    }
   }
 
   &__icon {
     border-radius: 4px;
-    width: 56px;
     height: 56px;
     overflow: hidden;
+    width: 56px;
   }
 }
 
