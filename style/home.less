@@ -12,13 +12,13 @@
   grid-template-rows: 1fr 1.5fr;
   justify-content: center;
   min-height: 100vh;
-  min-height: max-content;
   padding-top: 54px;
 
   &__content {
     grid-column-end: 3;
     grid-column-start: 1;
     justify-self: center;
+    padding: 16px;
 
     &-title {
       color: @primary-color;
@@ -82,9 +82,10 @@
 @media (max-width: 768px) {
   .c-home {
     padding-top: 58px;
+    grid-template-rows: max-content max-content 1fr;
 
     &__social {
-      top: 25%
+      top: 22%
     }
   }
 }
