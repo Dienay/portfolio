@@ -17,6 +17,7 @@
   &__list {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -42,5 +43,13 @@
 
   &__icon {
     width: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-skills {
+    &__list {
+      justify-content: space-between;
+    }
   }
 }
