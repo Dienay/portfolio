@@ -16,31 +16,34 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     justify-content: space-evenly;
-  }
-
-  &__item {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
     text-align: center;
   }
 
-  &__container-icon {
-    align-items: center;
-    border-radius: 4px;
-    display: flex;
-    height: 56px;
-    justify-content: center;
-    margin-bottom: 8px;
-    overflow: hidden;
-  }
+  &__item {
+    display: grid;
+    min-width: max-content;
+    width: 88px;
 
-  &__container-less {
-    background-color: #214674;
+    p {
+      text-decoration: underline;
+    }
   }
 
   &__icon {
+    border-radius: 4px;
+    height: 56px;
+    overflow: hidden;
     width: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .c-skills {
+    &__list {
+      justify-content: space-between;
+    }
   }
 }
