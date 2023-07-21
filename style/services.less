@@ -75,13 +75,25 @@
     display: grid;
     justify-content: center;
     align-content: center;
+    z-index: 1;
+  }
+
+  &__icon {
+    max-width: 90px;
+    max-height: 80px;
+    justify-self: center;
+    margin-bottom: 8px;
   }
 
   &__subtitle {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     color: @secondary-color;
 
     #text-theme.title-h3();
+  }
+
+  &__description {
+    max-width: 300px;
   }
 }
 
