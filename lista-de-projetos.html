@@ -1,119 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" />
+
+    <!-- global styles -->
+    <link rel="stylesheet/less" type="text/css" href="style/global.less" />
+    <!-- styles -->
+    <link rel="stylesheet/less" type="text/css" href="style/header.less" />
+    <link rel="stylesheet/less" type="text/css" href="./style/lista-de-projetos.less" />
+    <link rel="stylesheet/less" type="text/css" href="./style/contato.less" />
+
     <title>Dienay - Projetos</title>
-    <link rel="stylesheet" href="./style/comum.css">
-    <link rel="stylesheet" href="./style/lista-de-projetos.css">
-    <link rel="stylesheet" href="./style/contato.css">
-</head>
-<body>
-    <header>
-        <div id="headline">
-            <a href="./index.html">
-                <h3>Dienay</h3>
-            </a>
+  </head>
+  <body>
+    <header class="c-header">
+      <div class="container">
+        <a class="c-header__logo" href="/index.html">Dienay</a>
 
-            
-        </div>
+        <a class="c-header__nav-home" href="/index.html">Home</a>
+      </div>
     </header>
+    
     <div id="projetos">
-        <h2>Meus projetos</h2>
-        <div id="conteiner-projetos">
-            <div class="projeto">
-                <img src="./img/imagens/pc.png" alt="miniatura">
-                <div>
-                    <h2>SpotDy</h2>
-                    <h3>Full Stack</h3>
-                    <p>
-                        A proposta desse projeto foi para que fosse criada uma API de músicas e playlists que conversasse com o banco de dados, e uma aplicação em React que consumisse essa API. Podendo criar músicas, playlists, adicionar músicas a essas playlists e  mostrar detalhes delas. Acrescentei um player customizado, que neste momento está sendo desenvolvido.
-                    </p>
-                    <div>
-                        <a href="https://github.com/Dienay/spotDy-frontend" target="_blank"><button class="botao">front-end GitHub</button></a>
-                        <a href="https://github.com/Dienay/spotDy-backtend" target="_blank"><button class="botao">back-end GitHub</button></a>
-                    </div>
-                </div>
+      <h2>Meus projetos</h2>
+      <div id="conteiner-projetos">
+        <div class="projeto">
+          <img src="./img/images/pc.png" alt="miniatura" />
+          <div>
+            <h2>SpotDy</h2>
+            <h3>Full Stack</h3>
+            <p>
+              A proposta desse projeto foi para que fosse criada uma API de
+              músicas e playlists que conversasse com o banco de dados, e uma
+              aplicação em React que consumisse essa API. Podendo criar músicas,
+              playlists, adicionar músicas a essas playlists e mostrar detalhes
+              delas. Acrescentei um player customizado, que neste momento está
+              sendo desenvolvido.
+            </p>
+            <div>
+              <a
+                href="https://github.com/Dienay/spotDy-frontend"
+                target="_blank"
+                ><button class="botao">front-end GitHub</button></a
+              >
+              <a
+                href="https://github.com/Dienay/spotDy-backtend"
+                target="_blank"
+                ><button class="botao">back-end GitHub</button></a
+              >
             </div>
-            
-            <div class="projeto">
-                <div>
-                    <h2>RappiA4</h2>
-                    <h3>Front-end</h3>
-                    <p>
-                        RappiA4 é uma aplicação em React que tem o intuito de ter funcionalidades parecidas com as de um aplicativo de delivery famoso, com telas de cadastro, login, criação e edição de endereço e usuário, carrinho de compras, histórico de compras e mais alguns detalhes. Ele também consumia uma API já existente.
-                    </p>
-                    <a href="https://github.com/Dienay/Rappi4A" target="_blank"><button class="botao">ver no GitHub</button></a>
-                </div>
-                <img src="./img/imagens/mobile.png" alt="">
-            </div>
-            
-            <div class="projeto">
-                <img src="./img/imagens/notebook.png" alt="">
-                <div>
-                    <h2>Labex</h2>
-                    <h3>Front-end</h3>
-                    <p>
-                        O projeto Labex tinha a proposta de fazer agendamento para viagens espaciais consumindo uma API já existente. As páginas administrativas da aplicação só podia se acessadas por um usuário autorizado.
-                    </p>
-                    <a href="https://github.com/Dienay/Labex" target="_blank"><button class="botao">ver no GitHub</button></a>
-                </div>
-            </div>
-
-            <div class="projeto">
-                <div>
-                    <h2>Astromatch</h2>
-                    <h3>Front-end</h3>
-                    <p>
-                        Astromatch é uma simulação de um famoso aplicativo de encontros, pegando perfis de uma API para que fosse possível o usuário gostar ou não desse perfil.
-                    </p>
-                    <a href="https://github.com/Dienay/Astromatch" target="_blank"><button class="botao">ver no GitHub</button></a>
-                </div>
-                <img src="./img/imagens/mobile.png" alt="">
-            </div>
+          </div>
         </div>
-        <a href="#"><button class="botao mais-projetos">voltar ao topo</button></a>
+
+        <div class="projeto">
+          <div>
+            <h2>RappiA4</h2>
+            <h3>Front-end</h3>
+            <p>
+              RappiA4 é uma aplicação em React que tem o intuito de ter
+              funcionalidades parecidas com as de um aplicativo de delivery
+              famoso, com telas de cadastro, login, criação e edição de endereço
+              e usuário, carrinho de compras, histórico de compras e mais alguns
+              detalhes. Ele também consumia uma API já existente.
+            </p>
+            <a href="https://github.com/Dienay/Rappi4A" target="_blank"
+              ><button class="botao">ver no GitHub</button></a
+            >
+          </div>
+          <img src="./img/images/mobile.png" alt="" />
+        </div>
+
+        <div class="projeto">
+          <img src="./img/images/notebook.png" alt="" />
+          <div>
+            <h2>Labex</h2>
+            <h3>Front-end</h3>
+            <p>
+              O projeto Labex tinha a proposta de fazer agendamento para viagens
+              espaciais consumindo uma API já existente. As páginas
+              administrativas da aplicação só podia se acessadas por um usuário
+              autorizado.
+            </p>
+            <a href="https://github.com/Dienay/Labex" target="_blank"
+              ><button class="botao">ver no GitHub</button></a
+            >
+          </div>
+        </div>
+
+        <div class="projeto">
+          <div>
+            <h2>Astromatch</h2>
+            <h3>Front-end</h3>
+            <p>
+              Astromatch é uma simulação de um famoso aplicativo de encontros,
+              pegando perfis de uma API para que fosse possível o usuário gostar
+              ou não desse perfil.
+            </p>
+            <a href="https://github.com/Dienay/Astromatch" target="_blank"
+              ><button class="botao">ver no GitHub</button></a
+            >
+          </div>
+          <img src="./img/images/mobile.png" alt="" />
+        </div>
+      </div>
+      <a href="#"
+        ><button class="botao mais-projetos">voltar ao topo</button></a
+      >
     </div>
     <div id="contato">
-        <h2>Contate-me!</h2>
-        <div>
-            <p>
-                Procuro oportunidade de trabalho onde eu possa aprender,
-                me desenvolver e evoluir na minha carreia profissional.
-            </p>
-            <p>E-mail para contato: email@email.com.br</p>
-            <p>Celular: (xx) xxxxx-xxxx</p>
-        </div>
-        <ul id="redes-sociais-baixo">
-            <li>
-                <a href="https://github.com/Dienay" target="_blank">
-                    <img src="./img/icones/github.svg" alt="GitHub">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/dienay/" target="_blank">
-                    <img src="./img/icones/instagram.svg" alt="Instagram">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/dienaylima/" target="_blank">
-                    <img src="./img/icones/linkedin.svg" alt="LinkedIn">
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/dienay_lima" target="_blank">
-                    <img src="./img/icones/twitter.svg" alt="Twitter">
-                </a>
-            </li>
-            <li>
-                <a href="https://api.whatsapp.com/send?phone=5586995842272&text=Oi%20eu%20sou%20o" target="_blank">
-                    <img src="./img/icones/whatsapp.svg" alt="WhatsApp">
-                </a>
-            </li>
-        </ul>
+      <h2>Contate-me!</h2>
+      <div>
+        <p>
+          Procuro oportunidade de trabalho onde eu possa aprender, me
+          desenvolver e evoluir na minha carreia profissional.
+        </p>
+        <p>E-mail para contato: email@email.com.br</p>
+        <p>Celular: (xx) xxxxx-xxxx</p>
+      </div>
+      <ul id="redes-sociais-baixo">
+        <li>
+          <a href="https://github.com/Dienay" target="_blank">
+            <img src="./img/icones/github.svg" alt="GitHub" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/dienay/" target="_blank">
+            <img src="./img/icones/instagram.svg" alt="Instagram" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/dienaylima/" target="_blank">
+            <img src="./img/icones/linkedin.svg" alt="LinkedIn" />
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/dienay_lima" target="_blank">
+            <img src="./img/icones/twitter.svg" alt="Twitter" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://api.whatsapp.com/send?phone=5586995842272&text=Oi%20eu%20sou%20o"
+            target="_blank"
+          >
+            <img src="./img/icones/whatsapp.svg" alt="WhatsApp" />
+          </a>
+        </li>
+      </ul>
     </div>
     <footer>
-        <p>© 2020 Dienay</p>
+      <p>© 2020 Dienay</p>
     </footer>
-</body>
+
+    <!-- Add LESS -->
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+  </body>
 </html>
