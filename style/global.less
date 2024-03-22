@@ -1,15 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-@primary-color: #307ac8;
-@secondary-color: #C74D44;
-@bg-light-color: #d4efff;
-@light-color: #ffffff;
-@text-color: #292c2f;
-@dark-color: #09293d;
-@highlight-color: #2AB0DE;
+// Variables
+// font styles
+@text-primary-font: "Ubuntu", sans-serif;
+@text-secondary-font: "IBM Plex Mono", monospace;
 
-@default-font-family: "Roboto", sans-seri;
-@primary-font-family: "Montserrat", sans-seri;
+// font sizes
+@text-xs: 0.875rem; // 14px
+@text-s: 1rem; // 16px
+@text-m: 1.125rem; // 18px
+@text-l: 1.25rem; // 20px
+@text-xl: 1.5rem; // 24px
+@text-xxl: 2rem; // 32px
+@text-xxxl: 3rem; // 48px
+
+// font weight
+@text-light: 300;
+@text-regular: 400;
+@text-medium: 500;
+@text-semi-bold: 600;
+@text-bold: 700;
+@text-extra-bold: 800;
+@text-black: 900;
+
+// size guide
+@size-xxs: 4px;
+@size-xs: 8px;
+@size-s: 16px;
+@size-m: 24px;
+@size-l: 32px;
+@size-xl: 48px;
+@size-xxl: 64px;
+@size-xxxl: 96px;
+
+// logo sizes
+@logo-l: 56px;
+@logo-m: 40px;
+@logo-s: 32px;
+
+// navbar opened height
+@navbar-opened-height: 192px;
+
+// breakpoints
+@max576: ~"(max-width: 576px)";
+@max768: ~"(max-width: 768px)";
+@max992: ~"(max-width: 992px)";
+@max1200: ~"(max-width: 1200px)";
+
+// header size
+@header-extra-small-height: 56px;
+@header-small-height: 72px;
+@header-medium-height: 88px;
+@header-large-height: 104px;
+@header-extra-large-height: 120px;
+
+@container-height-header-extra-small: calc(100vh - @header-extra-small-height);
+@container-height-header-small: calc(100vh - @header-small-height);
+@container-height-header-medium: calc(100vh - @header-medium-height);
+@container-height-header-large: calc(100vh - @header-large-height);
+@container-height-header-extra-large: calc(100vh - @header-extra-large-height);
 
 * {
   box-sizing: border-box;
@@ -23,73 +73,103 @@ html {
   scroll-behavior: smooth;
 
   body {
-    color: @text-color;
-    font-family: @default-font-family;
+    color: #color[dark];
+    font-family: @text-primary-font;
+  }
+}
+
+// colors
+#color() {
+  light: #ffffff;
+  dark: #000000;
+  highlight: #2AB0DE;
+  error: #C74D44;
+}
+
+#logo-size {
+  .large() {
+    height: @logo-l;
+  }
+
+  .medium() {
+    height: @logo-m;
+  }
+
+  .small() {
+    height: @logo-s;
   }
 }
 
 #text-theme {
   .default() {
-    font-family: @primary-font-family;
-    font-weight: 400;
+    font-family: @text-primary-font;
+    font-weight: @text-regular
   }
 
-  .title-h1 {
-    font-size: 48px;
-
+  .text-xxxl {
+    font-size: @text-xxxl;
     .default();
   }
 
-  .title-h2 {
-    font-size: 32px;
-
+  .text-xxl {
+    font-size: @text-xxl;
     .default();
   }
 
-  .title-h3 {
-    font-size: 24px;
-
-    .default();
+  .text-xl {
+    font-size: @text-xl;
   }
 
-  .subtitle {
-    .default();
+  .text-m {
+    font-size: @text-m;
   }
 
-  .text() {
-    font-size: 16px;
+  .text-s {
+    font-size: @text-s;
+    font-family: @text-secondary-font;
   }
 }
 
 #theme-button {
   .default() {
-    border-radius: 2px;
+    border-radius: @size-s;
     border: none;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 15px 50px;
+    font-size: @text-l;
+    font-weight: 300;
+    padding: @size-s @size-xl;
     transition: all 0.6s ease-in;
   }
 
-  .primary() {
-    background: @primary-color;
-
+  .primary-light() {
     .default();
+
+    background: #color[light];
+    color: #color[dark];
   }
 
-  .secondary() {
+  .primary-dark() {
     .default();
+
+    background: #color[dark];
+    color: #color[light];
+  }
+
+  .secondary-light() {
+    .default();
+
+    background: #color[dark];
+    border: 1px solid #color[light];
+    color: #color[light];
+  }
+
+  .secondary-dark() {
+    .default();
+
+    border: 1px solid #color[dark];
+    color: #color[dark];
   }
 
   .hover() {
-    background: @light-color;
-    color: @primary-color;
+    opacity: 0.4;
   }
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
-  width: 85%;
 }
