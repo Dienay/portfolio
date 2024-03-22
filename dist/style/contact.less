@@ -1,0 +1,85 @@
+@import "global";
+
+.c-contact {
+  display: none;
+  background-color: #color[dark];
+  color: #color[light];
+  padding-top: 120px;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1120px;
+    padding: 0 @size-l;
+  }
+
+  &__title {
+    margin-bottom: @size-s;
+    text-align: center;
+
+    #text-theme.text-xxxl;
+  }
+
+  &__subtitle {
+    text-align: center;
+  }
+
+  &__form {
+    display: grid;
+    gap: @size-l;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 56px;
+  }
+
+  &__form field {
+    margin-bottom: @size-l;
+  }
+
+  &__form field label {
+    color: #color[light];
+    display: block;
+    margin-bottom: @size-s;
+  }
+
+  &__form field input {
+    background-color: #color[dark];
+    border: none;
+    border-bottom: 1px solid #color[light];
+    padding:@size-xs;
+    width: 100%;
+  }
+
+
+  &__form-name {
+
+  }
+
+  &__form-email {
+
+  }
+
+  &__form-message {
+    grid-column-end: 3;
+    grid-column-start: 1;
+  }
+
+  &__form-button {
+    #theme-button.primary-light();
+
+    grid-column-end: 3;
+    grid-column-start: 1;
+    justify-self: center;
+    margin-bottom: @size-xxl;
+  }
+
+  &__form-button:hover {
+    #theme-button.hover();
+  }
+}
+
+@media @max1200 {}
+
+@media @max992 {}
+
+@media @max768{}
+
+@media @max576 {}

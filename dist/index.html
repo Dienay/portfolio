@@ -86,18 +86,7 @@
         </div>
       </section>
 
-    <!-- START jobs -->
-    <section class="c-services" id="services">
-      <div class="container">
-        <h2 class="c-services__title">O que faço</h2>
-        <section class="c-services__container">
-          <div class="c-services__service c-services__frontend">
-            <div class="c-services__content">
-              <img class="c-services__icon" src="/img/images/frontend.png" alt="">
-              <h3 class="c-services__subtitle">Front-End</h3>
-              <p class="c-services__description">Desenvolvimento de sites e aplicações para web utilizando, HTML, CSS, LESS, Javascript e ReactJs</p>
-              <p></p>
-            </div>
+    </section>
   </section>
   <!-- END HOME -->
 
@@ -118,74 +107,82 @@
     </div>
   </section>
   <!-- END SKILLS -->
-          </div>
-          <div class="c-services__service c-services__backend">
-            <div class="c-services__content">
-              <img class="c-services__icon" src="/img/images/backend.png" alt="">
-              <h3 class="c-services__subtitle">Back-end</h3>
-              <p class="c-services__description">Criação de soluções com NodeJs</p>
-            </div>
-          </div>
-          <div class="c-services__service c-services__mobile">
-            <div class="c-services__content">
-              <img class="c-services__icon" src="/img/images/mobile.png" alt="">
-              <h3 class="c-services__subtitle">Mobile</h3>
-              <p class="c-services__description">Desenvolvimento de aplicativos híbridos para dispositivos móveis com Flutter</p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-    <!-- END jobs -->
 
-    <!-- Add LESS -->
-    <script src="https://cdn.jsdelivr.net/npm/less"></script>
-    <!-- Lida com menu hamburguer -->
-    <script>
-      (function () {
-        const headerElement = document.querySelector(".c-header");
-        const handleNavBar = document.querySelector(
-          ".c-header__navbar-collapse"
-        );
+  <!-- START WORKS -->
+  <section class="c-works" id="works">
+    <div class="container">
+      <h2 class="c-works__title">O que faço</h2>
+      <section class="c-works__container">
+        <div class="c-works__service c-works__frontend">
+          <div class="c-works__container">
+            <img class="c-works__icon" src="/img/images/frontend.png" alt="">
+            <h3 class="c-works__subtitle">Front-End</h3>
+            <p class="c-works__description">Desenvolvimento de sites e aplicações para web utilizando, HTML, CSS, LESS,
+              Javascript e ReactJs</p>
+          </div>
+        </div>
+        <div class="c-works__service c-works__backend">
+          <div class="c-works__container">
+            <img class="c-works__icon" src="/img/images/backend.png" alt="">
+            <h3 class="c-works__subtitle">Back-end</h3>
+            <p class="c-works__description">Criação de soluções com NodeJs</p>
+          </div>
+        </div>
+        <div class="c-works__service c-works__mobile">
+          <div class="c-works__container">
+            <img class="c-works__icon" src="/img/images/mobile.png" alt="">
+            <h3 class="c-works__subtitle">Mobile</h3>
+            <p class="c-works__description">Desenvolvimento de aplicativos híbridos para dispositivos móveis com Flutter
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+  <!-- END WORKS -->
 
-        headerElement.addEventListener("click", function (event) {
-          if (
-            event.target.classList.contains("c-header__button") ||
-            event.target.classList.contains("button-icon")
-          ) {
-            handleNavBar.classList.toggle("c-header__navbar-collapse--open");
-          }
+  <!-- START CONTACT -->
+  <section class="c-contact" id="contact">
+    <div class="c-contact__container">
+      <h2 class="c-contact__title">Contact</h2>
+      <h3 class="c-contact__subtitle">I'm currently available for freelance work</h3>
+      <section class="c-contact__container">
+        <h3 class="c-contact__subtitle"></h3>
+        <form class="c-contact__form" action="">
+          <field class="c-contact__form-name">
+            <label for="">Your name*</label>
+            <input type="text" placeholder="Enter your name" />
+          </field>
+          <field class="c-contact__form-email">
+            <label for="">Your email*</label>
+            <input type="text" placeholder="Enter your email" />
+          </field>
+          <field class="c-contact__form-message">
+            <label for="">Your message*</label>
+            <input type="text" placeholder="Enter your needs" />
+            <!-- <textarea name="" id="" cols="30" rows="10" placeholder="Enter your needs"></textarea> -->
+          </field>
+          <button class="c-contact__form-button">Send Message</button>
+        </form>
+      </section>
+    </div>
+  </section>
+  <!-- END CONTACT -->
+
+  <!-- START footer -->
+  <section class="c-footer" id="footer">
+    <div class="c-footer__container">
+      <p>© 2024 Dienay Lima.</p>
+      <p>Politica de Privacidade</p>
+      <p>Termos & Condições</p>
+    </div>
+  </section>
+  <!-- END footer -->
 
   <!-- Add LESS -->
   <script src="js/less.js" type="text/javascript"></script>
   <!-- Add LESS -->
-
-  <!-- Lida com menu hamburguer -->
-  <script>
-    (function () {
-      const headerElement = document.querySelector(".c-header");
-      const handleNavBar = document.querySelector(
-        ".c-header__navbar-collapse"
-      );
-
-      headerElement.addEventListener("click", function (event) {
-        if (
-          event.target.classList.contains("c-header__button") ||
-          event.target.classList.contains("button-icon")
-        ) {
-          handleNavBar.classList.toggle("c-header__navbar-collapse--open");
-        }
-
-        if (
-          event.target.classList.contains("c-header__nav-link") &&
-          handleNavBar.classList.contains("c-header__navbar-collapse--open")
-        ) {
-          handleNavBar.classList.remove("c-header__navbar-collapse--open");
-        }
-      });
-    })();
-  </script>
-          }
+  <script src="js/button.js"></script>
   <script src="js/skills.js"></script>
 </body>
 </html>
