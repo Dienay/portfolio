@@ -1,57 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <!-- favicon -->
-    <link rel="shortcut icon" href="img/favicon.png" />
-
-    <!-- global styles -->
-    <link rel="stylesheet/less" type="text/css" href="style/global.less" />
-    <!-- styles -->
-    <link rel="stylesheet/less" type="text/css" href="style/home.less" />
-    <link rel="stylesheet/less" type="text/css" href="style/header.less" />
-    <link rel="stylesheet/less" type="text/css" href="style/skills.less" />
-    <link rel="stylesheet/less" type="text/css" href="style/services.less" />
-
-    <title>Dienay</title>
-  </head>
-  <body>
-    <header class="c-header">
-      <div class="container">
-        <a class="c-header__logo" href="#">Dienay</a>
-        <button class="c-header__button" type="button">
-          <span class="button-icon"></span>
-          <span class="button-icon"></span>
-          <span class="button-icon"></span>
-        </button>
-
-        <nav class="c-header__navbar-collapse" id="navbarToggler">
-          <ul class="c-header__nav-links">
-            <li class="c-header__nav-item">
-              <a class="c-header__nav-link" href="#home">Home</a>
-            </li>
-            <li class="c-header__nav-item">
-              <a class="c-header__nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="c-header__nav-item">
-              <a class="c-header__nav-link" href="#services">O que faço</a>
-            </li>
-            <li class="c-header__nav-item">
-              <a class="c-header__nav-link" href="#portfolio">Projetos</a>
-            </li>
-            <li class="c-header__nav-item">
-              <a class="c-header__nav-link" href="#contact">Contato</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
 
     <!-- START HOME -->
     <section id="home" class="c-home">
@@ -121,46 +69,62 @@
               />
             </div>
             <p>Javascript</p>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="img/D-Logo.svg" />
+
+  <!-- global styles -->
+  <link rel="stylesheet/less" type="text/css" href="style/global.less" />
+  <!-- styles -->
+  <link rel="stylesheet/less" type="text/css" href="style/header.less" />
+  <link rel="stylesheet/less" type="text/css" href="style/home.less" />
+  <link rel="stylesheet/less" type="text/css" href="style/skills.less" />
+  <link rel="stylesheet/less" type="text/css" href="style/works.less" />
+  <link rel="stylesheet/less" type="text/css" href="style/projects.less" />
+  <link rel="stylesheet/less" type="text/css" href="style/contact.less" />
+  <link rel="stylesheet/less" type="text/css" href="style/footer.less" />
+
+  <title>Dienay</title>
+</head>
+
+<body>
+  <!-- START HEADER -->
+  <header class="c-header">
+    <div class="c-header__container">
+      <a class="c-header__logo" href="#"><img src="img/D-Logo.svg" alt="Logo D"></a>
+
+      <button class="c-header__button" type="button">
+        <span class="button-icon"></span>
+        <span class="button-icon"></span>
+        <span class="button-icon"></span>
+      </button>
+
+      <nav class="c-header__navbar-collapse" id="navbarToggler">
+        <ul class="c-header__nav-links">
+          <li class="c-header__nav-item">
+            <a class="c-header__nav-link" href="#home">Inicio</a>
           </li>
-          <li class="c-skills__item">
-            <div class="c-skills__container-icon">
-              <img
-                class="c-skills__icon"
-                src="/img/icons/skills/next.svg"
-                alt=""
-              />
-            </div>
-            <p>NextJs</p>
+          <li class="c-header__nav-item">
+            <a class="c-header__nav-link" href="#skills">Habilidades</a>
           </li>
-          <li class="c-skills__item">
-            <div class="c-skills__container-icon">
-              <img
-                class="c-skills__icon"
-                src="/img/icons/skills/react.svg"
-                alt=""
-              />
-            </div>
-            <p>ReactJs</p>
+          <li class="c-header__nav-item">
+            <a class="c-header__nav-link" href="#works">Trabalho</a>
           </li>
-          <li class="c-skills__item">
-            <div class="c-skills__container-icon">
-              <img
-                class="c-skills__icon"
-                src="/img/icons/skills/less.svg"
-                alt=""
-              />
-            </div>
-            <p>Less</p>
+          <li class="c-header__nav-item">
+            <a class="c-header__nav-link" href="#projects">Projetos</a>
           </li>
-          <li class="c-skills__item">
-            <div class="c-skills__container-icon">
-              <img
-                class="c-skills__icon"
-                src="/img/icons/skills/git.svg"
-                alt=""
-              />
-            </div>
-            <p>Git</p>
+          <li class="c-header__nav-item">
+            <a class="c-header__nav-link" href="#contact">Contato</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- END HEADER -->
           </li>
           <li class="c-skills__item">
             <div class="c-skills__container-icon">
@@ -227,14 +191,34 @@
             handleNavBar.classList.toggle("c-header__navbar-collapse--open");
           }
 
-          if (
-            event.target.classList.contains("c-header__nav-link") &&
-            handleNavBar.classList.contains("c-header__navbar-collapse--open")
-          ) {
-            handleNavBar.classList.remove("c-header__navbar-collapse--open");
+  <!-- Add LESS -->
+  <script src="/scripts/less.js" type="text/javascript"></script>
+  <!-- Add LESS -->
+
+  <!-- Lida com menu hamburguer -->
+  <script>
+    (function () {
+      const headerElement = document.querySelector(".c-header");
+      const handleNavBar = document.querySelector(
+        ".c-header__navbar-collapse"
+      );
+
+      headerElement.addEventListener("click", function (event) {
+        if (
+          event.target.classList.contains("c-header__button") ||
+          event.target.classList.contains("button-icon")
+        ) {
+          handleNavBar.classList.toggle("c-header__navbar-collapse--open");
+        }
+
+        if (
+          event.target.classList.contains("c-header__nav-link") &&
+          handleNavBar.classList.contains("c-header__navbar-collapse--open")
+        ) {
+          handleNavBar.classList.remove("c-header__navbar-collapse--open");
+        }
+      });
+    })();
+  </script>
           }
-        });
-      })();
-    </script>
-  </body>
 </html>
