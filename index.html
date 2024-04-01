@@ -14,8 +14,7 @@
   <!-- styles -->
   <link rel="stylesheet/less" type="text/css" href="style/header.less" />
   <link rel="stylesheet/less" type="text/css" href="style/home.less" />
-  <link rel="stylesheet/less" type="text/css" href="style/skills.less" />
-  <link rel="stylesheet/less" type="text/css" href="style/works.less" />
+  <link rel="stylesheet/less" type="text/css" href="style/about.less" />
   <link rel="stylesheet/less" type="text/css" href="style/projects.less" />
   <link rel="stylesheet/less" type="text/css" href="style/contact.less" />
   <link rel="stylesheet/less" type="text/css" href="style/footer.less" />
@@ -41,10 +40,7 @@
             <a class="c-header__nav-link" href="#home">Inicio</a>
           </li>
           <li class="c-header__nav-item">
-            <a class="c-header__nav-link" href="#skills">Habilidades</a>
-          </li>
-          <li class="c-header__nav-item">
-            <a class="c-header__nav-link" href="#works">Trabalho</a>
+            <a class="c-header__nav-link" href="#about">Sobre</a>
           </li>
           <li class="c-header__nav-item">
             <a class="c-header__nav-link" href="#projects">Projetos</a>
@@ -90,59 +86,150 @@
   </section>
   <!-- END HOME -->
 
-  <!-- START SKILLS -->
-  <section class="c-skills" id="skills">
-    <div class="c-skills__container">
-      <h2 class="c-skills__title">Minhas Skills</h2>
-      <h3 class="c-skills__subtitle">Data Engineering</h3>
-      <ul class="c-skills__list data-engineering-list"></ul>
-      <h3 class="c-skills__subtitle">DataBase</h3>
-      <ul class="c-skills__list database-list"></ul>
-      <h3 class="c-skills__subtitle">Front-End</h3>
-      <ul class="c-skills__list frontend-list"></ul>
-      <h3 class="c-skills__subtitle">Back-End</h3>
-      <ul class="c-skills__list backend-list"></ul>
-      <!-- <h3 class="c-skills__subtitle">Others</h3>
-        <ul class="c-skills__list others-list"></ul> -->
+  <!-- START ABOUT -->
+  <section id="about" class="c-about">
+    <div class="c-about__container">
+      <div class="c-about__preview">
+        <h2 class="c-about__preview__title">Sobre</h2>
+        <p class="c-about__preview__text">Aqui você encontrará mais informações sobre mim, o que faço e minhas habilidades atuais principalmente em termos de programação e tecnologia</p>
+      </div>
+      <div class="c-about__summary">
+        <h3 class="c-about__summary__subtitle">Resumo</h3>
+        <p class="c-about__summary__text">
+          Formado Análise e desenvolvimento de sistemas, atuo oferecendo soluções completas para sistemas web
+        </p>
+        <p class="c-about__summary__text">
+          Sou um desenvolvedor Full Stack em JavaScript e TypeScript, especializado em Angular e Node.js, com foco em criar aplicações web robustas e escaláveis. Desde a construção do frontend até a gestão do backend, garanto que cada aspecto do projeto contribua para o seu sucesso geral. Confira alguns dos meus projetos na seção Portfólio.
+        </p>
+        <p class="c-about__summary__text">
+          Estou ativamente em busca de novas oportunidades onde eu possa aplicar minhas habilidades, continuar aprendendo e contribuir para projetos empolgantes. Se você tiver uma oportunidade desafiadora que esteja alinhada com minha experiência, sinta-se à vontade para entrar em contato. Estou sempre aberto a novas conexões e colaborações.
+        </p>
+      </div>
+
+      <div class="c-about__skills">
+        <h3 class="c-about__skills__subtitle">Minhas Habilidades</h3>
+        <ul class="c-about__skills__list">
+          <li class="c-about__item">HTML</li>
+          <li class="c-about__item">CSS</li>
+          <li class="c-about__item">JavaScript</li>
+          <li class="c-about__item">TypeScript</li>
+          <li class="c-about__item">Design Responsivo</li>
+          <li class="c-about__item">SEO</li>
+          <li class="c-about__item">Angular</li>
+          <li class="c-about__item">React</li>
+          <li class="c-about__item">Less</li>
+          <li class="c-about__item">Sass</li>
+          <li class="c-about__item">Node</li>
+          <li class="c-about__item">Git</li>
+          <li class="c-about__item">Github</li>
+        </ul>
+        <h3 class="c-about__skills__subtitle">Estudando</h3>
+        <ul class="c-about__skills__list">
+          <li class="c-about__item">Python</li>
+          <li class="c-about__item">MongoDB</li>
+          <li class="c-about__item">MySQL</li>
+          <li class="c-about__item">Jupyter</li>
+          <li class="c-about__item">Pandas</li>
+          <li class="c-about__item">Matplotlib</li>
+          <li class="c-about__item">Numpy</li>
+        </ul>
+      </div>
     </div>
   </section>
-  <!-- END SKILLS -->
+  <!-- END ABOUT -->
 
-  <!-- START WORKS -->
-  <section class="c-works" id="works">
-    <div class="container">
-      <h2 class="c-works__title">O que faço</h2>
-      <section class="c-works__container">
-        <div class="c-works__service c-works__frontend">
-          <div class="c-works__container">
-            <img class="c-works__icon" src="/img/images/frontend.png" alt="">
-            <h3 class="c-works__subtitle">Front-End</h3>
-            <p class="c-works__description">Desenvolvimento de sites e aplicações para web utilizando, HTML, CSS, LESS,
-              Javascript e ReactJs</p>
+  <!-- START PROJECTS -->
+  <section id="projects" class="c-projects">
+    <div class="c-projects__container">
+      <h2 class="c-projects__title">Projetos</h2>
+      <section class="">
+        <div id="conteiner-projetos">
+          <div class="projeto">
+            <img src="./img/images/pc.png" alt="miniatura" />
+            <div>
+              <h2>SpotDy</h2>
+              <h3>Full Stack</h3>
+              <p>
+                A proposta desse projeto foi para que fosse criada uma API de
+                músicas e playlists que conversasse com o banco de dados, e uma
+                aplicação em React que consumisse essa API. Podendo criar músicas,
+                playlists, adicionar músicas a essas playlists e mostrar detalhes
+                delas. Acrescentei um player customizado, que neste momento está
+                sendo desenvolvido.
+              </p>
+              <div>
+                <a
+                  href="https://github.com/Dienay/spotDy-frontend"
+                  target="_blank"
+                  ><button class="botao">front-end GitHub</button></a
+                >
+                <a
+                  href="https://github.com/Dienay/spotDy-backtend"
+                  target="_blank"
+                  ><button class="botao">back-end GitHub</button></a
+                >
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="c-works__service c-works__backend">
-          <div class="c-works__container">
-            <img class="c-works__icon" src="/img/images/backend.png" alt="">
-            <h3 class="c-works__subtitle">Back-end</h3>
-            <p class="c-works__description">Criação de soluções com NodeJs</p>
+
+          <div class="projeto">
+            <div>
+              <h2>RappiA4</h2>
+              <h3>Front-end</h3>
+              <p>
+                RappiA4 é uma aplicação em React que tem o intuito de ter
+                funcionalidades parecidas com as de um aplicativo de delivery
+                famoso, com telas de cadastro, login, criação e edição de endereço
+                e usuário, carrinho de compras, histórico de compras e mais alguns
+                detalhes. Ele também consumia uma API já existente.
+              </p>
+              <a href="https://github.com/Dienay/Rappi4A" target="_blank"
+                ><button class="botao">ver no GitHub</button></a
+              >
+            </div>
+            <img src="./img/images/mobile.png" alt="" />
           </div>
-        </div>
-        <div class="c-works__service c-works__mobile">
-          <div class="c-works__container">
-            <img class="c-works__icon" src="/img/images/mobile.png" alt="">
-            <h3 class="c-works__subtitle">Mobile</h3>
-            <p class="c-works__description">Desenvolvimento de aplicativos híbridos para dispositivos móveis com Flutter
-            </p>
+
+          <div class="projeto">
+            <img src="./img/images/notebook.png" alt="" />
+            <div>
+              <h2>Labex</h2>
+              <h3>Front-end</h3>
+              <p>
+                O projeto Labex tinha a proposta de fazer agendamento para viagens
+                espaciais consumindo uma API já existente. As páginas
+                administrativas da aplicação só podia se acessadas por um usuário
+                autorizado.
+              </p>
+              <a href="https://github.com/Dienay/Labex" target="_blank"
+                ><button class="botao">ver no GitHub</button></a
+              >
+            </div>
+          </div>
+
+          <div class="projeto">
+            <div>
+              <h2>Astromatch</h2>
+              <h3>Front-end</h3>
+              <p>
+                Astromatch é uma simulação de um famoso aplicativo de encontros,
+                pegando perfis de uma API para que fosse possível o usuário gostar
+                ou não desse perfil.
+              </p>
+              <a href="https://github.com/Dienay/Astromatch" target="_blank"
+                ><button class="botao">ver no GitHub</button></a
+              >
+            </div>
+            <img src="./img/images/mobile.png" alt="" />
           </div>
         </div>
       </section>
     </div>
   </section>
-  <!-- END WORKS -->
+  <!-- END PROJECTS -->
 
   <!-- START CONTACT -->
-  <section class="c-contact" id="contact">
+  <section id="contact" class="c-contact">
     <div class="c-contact__container">
       <h2 class="c-contact__title">Contact</h2>
       <h3 class="c-contact__subtitle">I'm currently available for freelance work</h3>
@@ -183,6 +270,5 @@
   <script src="js/less.js" type="text/javascript"></script>
   <!-- Add LESS -->
   <script src="js/button.js"></script>
-  <script src="js/skills.js"></script>
 </body>
 </html>
