@@ -61,23 +61,6 @@
 @container-height-header-large: calc(100vh - @header-large-height);
 @container-height-header-extra-large: calc(100vh - @header-extra-large-height);
 
-* {
-  box-sizing: border-box;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
-html {
-  scroll-behavior: smooth;
-
-  body {
-    color: #color[dark];
-    font-family: @text-primary-font;
-  }
-}
-
 // colors
 #color() {
   light: #ffffff;
@@ -171,5 +154,76 @@ html {
 
   .hover() {
     opacity: 0.4;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  body {
+    color: #color[light];
+    background-color: #color[dark];
+    font-family: @text-primary-font;
+
+    display: flex;
+    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+    scroll-snap-type: x mandatory;
+  }
+}
+
+.c-home, .c-about, .c-projects, .c-contact {
+  padding-top: @header-extra-large-height;
+  flex: 0 0 100%; /* Garante que cada seção tenha a largura total da tela */
+  scroll-snap-align: start; /* Define o ponto de ancoragem para o deslocamento suave */
+  width: 100vw;
+
+  &__container {
+    height: @container-height-header-extra-large;
+    padding: 0 @size-xxl;
+  }
+}
+
+@media @max1200 {
+  .c-home, .c-about, .c-projects, .c-contact {
+    padding-top: @header-large-height;
+    &__container {
+      height: @container-height-header-large;
+    }
+  }
+}
+
+@media @max992 {
+  .c-home, .c-about, .c-projects, .c-contact {
+    padding-top: @header-medium-height;
+    &__container {
+      height: @container-height-header-medium;
+    }
+  }
+}
+
+@media @max768{
+  .c-home, .c-about, .c-projects, .c-contact {
+    padding-top: @header-small-height;
+    &__container {
+      height: @container-height-header-small;
+    }
+  }
+}
+
+@media @max576 {
+  .c-home, .c-about, .c-projects, .c-contact {
+    padding-top: @header-extra-small-height;
+    &__container {
+      height: @container-height-header-extra-small;
+      padding: 0 @size-l;
+    }
   }
 }
