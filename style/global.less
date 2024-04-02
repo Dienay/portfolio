@@ -64,10 +64,10 @@
 
 // colors
 #color() {
-  light: #ffffff;
   dark: #000000;
-  highlight: #2AB0DE;
   error: #C74D44;
+  highlight: #2AB0DE;
+  light: #ffffff;
 }
 
 #logo-size {
@@ -91,13 +91,15 @@
   }
 
   .text-xxxl {
-    font-size: @text-xxxl;
     .default();
+
+    font-size: @text-xxxl;
   }
 
   .text-xxl {
-    font-size: @text-xxl;
     .default();
+
+    font-size: @text-xxl;
   }
 
   .text-xl {
@@ -170,20 +172,20 @@ html {
   scroll-behavior: smooth;
 
   body {
-    color: #color[light];
     background-color: #color[dark];
-    font-family: @text-primary-font;
-
+    color: #color[light];
     display: flex;
-    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+    font-family: @text-primary-font;
+    overflow-x: hidden;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
   }
 }
 
 .c-home, .c-about, .c-projects, .c-contact {
+  flex: 0 0 100%;
   padding-top: @header-extra-large-height;
-  flex: 0 0 100%; /* Garante que cada seção tenha a largura total da tela */
-  scroll-snap-align: start; /* Define o ponto de ancoragem para o deslocamento suave */
+  scroll-snap-align: start;
   width: 100vw;
 
   &__container {
@@ -195,6 +197,7 @@ html {
 @media @max1200 {
   .c-home, .c-about, .c-projects, .c-contact {
     padding-top: @header-large-height;
+
     &__container {
       height: @container-height-header-large;
     }
@@ -204,6 +207,7 @@ html {
 @media @max992 {
   .c-home, .c-about, .c-projects, .c-contact {
     padding-top: @header-medium-height;
+
     &__container {
       height: @container-height-header-medium;
     }
@@ -213,6 +217,7 @@ html {
 @media @max768{
   .c-home, .c-about, .c-projects, .c-contact {
     padding-top: @header-small-height;
+
     &__container {
       height: @container-height-header-small;
     }
@@ -222,6 +227,7 @@ html {
 @media @max576 {
   .c-home, .c-about, .c-projects, .c-contact {
     padding-top: @header-extra-small-height;
+
     &__container {
       height: @container-height-header-extra-small;
       padding: 0 @size-l;
