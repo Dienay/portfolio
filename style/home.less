@@ -1,15 +1,11 @@
 @import "global";
 
 .c-home {
-  background-color: #color[dark];
-  padding-top: @header-extra-large-height;
 
   &__container {
     align-items: center;
     display: grid;
     grid-template-columns: @size-xxl 1fr;
-    height: @container-height-header-extra-large;
-    padding: 0 @size-xxl;
   }
 
   &__social {
@@ -34,11 +30,6 @@
     &-item {
       border-radius: 2px;
       padding-bottom: @size-s;
-      transition: background-color 0.5s ease-out;
-
-      &:hover {
-        background-color: rgba(#color[dark]; 50%);
-      }
 
       &:last-child {
         margin-bottom: 0;
@@ -97,31 +88,10 @@
 
 }
 
-@media @max1200 {
-  .c-home {
-    padding-top: @header-large-height;
-    &__container {
-      height: @container-height-header-large;
-    }
-  }
-}
 
-@media @max992 {
-  .c-home {
-    padding-top: @header-medium-height;
-    &__container {
-      height: @container-height-header-medium;
-    }
-  }
-}
 
 @media @max768{
   .c-home {
-    padding-top: @header-small-height;
-    &__container {
-      height: @container-height-header-small;
-    }
-
     &__about-hello {
       font-size: @text-xxl;
     }
@@ -136,12 +106,3 @@
   }
 }
 
-@media @max576 {
-  .c-home {
-    padding-top: @header-extra-small-height;
-    &__container {
-      height: @container-height-header-extra-small;
-      padding: 0 @size-l;
-    }
-  }
-}
