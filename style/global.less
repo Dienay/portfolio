@@ -112,6 +112,7 @@
 
   .text-s {
     font-size: @text-s;
+    line-height: @text-xl;
     font-family: @text-secondary-font;
   }
 }
@@ -174,23 +175,21 @@ html {
   body {
     background-color: #color[dark];
     color: #color[light];
-    display: flex;
     font-family: @text-primary-font;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
   }
 }
 
 .c-home, .c-about, .c-projects, .c-contact {
-  flex: 0 0 100%;
   padding-top: @header-extra-large-height;
-  scroll-snap-align: start;
-  width: 100vw;
+  width: 100%;
 
   &__container {
-    height: @container-height-header-extra-large;
-    padding: 0 @size-xxl;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: @container-height-header-extra-large;
+    justify-content: center;
+    padding: @size-s @size-xxl;
   }
 }
 
@@ -199,7 +198,7 @@ html {
     padding-top: @header-large-height;
 
     &__container {
-      height: @container-height-header-large;
+      min-height: @container-height-header-large;
     }
   }
 }
@@ -209,17 +208,23 @@ html {
     padding-top: @header-medium-height;
 
     &__container {
-      height: @container-height-header-medium;
+      min-height: @container-height-header-medium;
     }
   }
 }
 
 @media @max768{
+  html body {
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-y: inherit;
+  }
+
   .c-home, .c-about, .c-projects, .c-contact {
     padding-top: @header-small-height;
 
     &__container {
-      height: @container-height-header-small;
+      min-height: @container-height-header-small;
     }
   }
 }
@@ -229,8 +234,8 @@ html {
     padding-top: @header-extra-small-height;
 
     &__container {
-      height: @container-height-header-extra-small;
-      padding: 0 @size-l;
+      min-height: @container-height-header-extra-small;
+      padding: @size-s @size-l;
     }
   }
 }
