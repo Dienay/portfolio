@@ -1,7 +1,6 @@
 @import "global";
 
-.c-home {
-
+body .c-home {
   &__container {
     align-items: center;
     display: grid;
@@ -50,40 +49,24 @@
   &__about {
     align-items: center;
     display: flex;
-    height: 100%;
+    height: calc(48vh + @size-xxl + @size-s);
     justify-content: center;
-  }
 
-  &__about-container {
-    max-width: 728px;
-  }
+    &-container {
+      max-width: 800px;
+      text-align: center;
+    }
 
-  &__about-hello {
-    #text-theme.text-xxxl();
+    &-presentation {
+      #text-theme.text-xxxl();
 
-    color: #color[light];
-    margin-bottom:@size-xs;
-  }
+      margin-bottom:@size-xxl;
+    }
 
-  &__about-presentation {
-    #text-theme.text-xxxl();
-
-    color: #color[light];
-    margin-bottom:@size-xs;
-  }
-
-  &__about-position {
-    #text-theme.text-xxl();
-
-    color: #color[light];
-    margin-bottom: @size-l;
-  }
-
-  &__about-description {
-    #text-theme.text-s;
-
-    color: #color[light];
-    text-align: justify;
+    &-description {
+      #text-theme.text-s;
+      text-align: justify;
+    }
   }
 
 }
@@ -91,17 +74,13 @@
 
 
 @media @max768{
-  .c-home {
+  body .c-home {
     &__about-hello {
       font-size: @text-xxl;
     }
 
     &__about-presentation {
       font-size: @text-xxl;
-    }
-
-    &__about-position {
-      font-size:  @text-xl;;
     }
   }
 }
