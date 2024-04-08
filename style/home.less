@@ -75,6 +75,29 @@ body .c-home {
 
 @media @max768{
   body .c-home {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+
+    &__social {
+      grid-row-start: 2;
+      justify-self: center;
+      align-self: baseline;
+
+      &-list::before, &-list::after {
+        display: none;
+      }
+
+      &-list {
+        display: flex;
+        gap: @size-l;
+      }
+    }
+
+    &__about {
+      height: 48vh;
+    }
+
     &__about-hello {
       font-size: @text-xxl;
     }
