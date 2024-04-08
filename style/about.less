@@ -1,77 +1,119 @@
 @import "global";
 
-.c-about {
-  // display: none;
-
+body .c-about {
   &__container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80vw;
-    display: grid;
+    display: grid ;
     grid-template-columns: 1fr 1fr;
-    align-content: flex-start;
-    gap: @size-xxl;
+    align-items: baseline;
+    gap: @size-l;
   }
 
-  &__preview {
+  &__title {
+    #text-theme.text-xxxl;
+
     grid-column-start: 1;
     grid-column-end: 3;
-    margin-bottom: @size-xl;
-
-    &__title {
-      #text-theme.text-xxxl;
-
-      margin-bottom: @size-m;
-      text-align: center;
-    }
-
-    &__text {
-      text-align: center;
-      #text-theme.text-m();
-    }
+    text-align: center;
+    align-self: self-end;
   }
 
-  &__summary {
+  &__info, &__skills {
     &__subtitle {
       #text-theme.text-xxl();
 
       margin-bottom: @size-l;
     }
+  }
+
+  &__info {
+    text-align: justify;
 
     &__text {
-      #text-theme.text-m();
+      #text-theme.text-s;
 
-      margin-bottom: @size-s;
-      font-family: @text-secondary-font;
+      margin-bottom: @size-m;
+
+      strong {
+        font-style: italic;
+      }
+
+      a {
+        text-decoration: underline;
+        font-style: italic;
+        color: #color[light];
+        cursor: pointer;
+      }
     }
   }
 
   &__skills {
-    &__subtitle {
-      #text-theme.text-xxl();
-
-      margin-bottom: @size-l;
-    }
-
     &__list {
       display: flex;
       flex-wrap: wrap;
       gap: @size-s;
       margin-bottom: @size-l;
     }
-  }
 
-  &__item {
-    background-color: rgba(#color[light]; 25%);
-    padding: @size-xs @size-m;
-    border-radius: @size-xxs;
+    &__item {
+      background-color: rgba(#color[light]; 25%);
+      border-radius: @size-xxs;
+      padding: @size-xs @size-s;
+    }
   }
 }
 
-@media @max1200 {}
+@media @max1200 {
+}
 
-@media @max992 {}
+@media @max992 {
+  body .c-about {
+    &__title {
+      font-size: @text-xxl;
+      margin-bottom: @size-l;
+    }
 
-@media @max768{}
+    &__info,
+    &__skills {
+      &__subtitle {
+        #text-theme.text-xl();
 
-@media @max576 {}
+        margin-bottom: @size-m;
+      }
+    }
+
+    &__skills {
+      &__list {
+        gap: @size-xs;
+        margin-bottom: @size-m;
+      }
+
+      &__item {
+        padding: @size-xxs @size-xs;
+      }
+    }
+  }
+}
+
+@media @max768 {
+  body .c-about {
+    &__container {
+      display: block;
+    }
+
+    &__info {
+      &__text {
+        margin-bottom: @size-s;
+      }
+    }
+
+    &__info,
+    &__skills {
+      &__subtitle {
+        #text-theme.text-xl();
+
+        margin-bottom: @size-s;
+      }
+    }
+  }
+}
+
