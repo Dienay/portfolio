@@ -50,11 +50,8 @@
 // header size
 @header-height: 64px;
 
-@container-height-header-extra-small: calc(100vh - @header-extra-small-height);
-@container-height-header-small: calc(100vh - @header-small-height);
-@container-height-header-medium: calc(100vh - @header-medium-height);
-@container-height-header-large: calc(100vh - @header-large-height);
-@container-height-header-extra-large: calc(100vh - @header-extra-large-height);
+// container height
+@container-height: calc(100vh - @header-height);
 
 // card size
 @card-width: 326px;
@@ -175,60 +172,25 @@ html {
 .c-about,
 .c-projects,
 .c-contact {
-  padding-top: @header-extra-large-height;
+  padding-top: @header-height;
   width: 100%;
 
   &__container {
     align-items: center;
     display: grid;
-    min-height: @container-height-header-extra-large;
+    min-height: @container-height;
     justify-content: center;
     padding: @size-s @size-xxl;
   }
 }
 
-@media @max1200 {
-  .c-home,
-  .c-about,
-  .c-projects,
-  .c-contact {
-    padding-top: @header-large-height;
 
-    &__container {
-      min-height: @container-height-header-large;
-    }
-  }
-}
-
-@media @max992 {
-  .c-home,
-  .c-about,
-  .c-projects,
-  .c-contact {
-    padding-top: @header-medium-height;
-
-    &__container {
-      min-height: @container-height-header-medium;
-    }
-  }
-}
 
 @media @max768 {
   html body {
     display: grid;
     grid-template-columns: 1fr;
     overflow-y: inherit;
-  }
-
-  .c-home,
-  .c-about,
-  .c-projects,
-  .c-contact {
-    padding-top: @header-small-height;
-
-    &__container {
-      min-height: @container-height-header-small;
-    }
   }
 }
 
@@ -237,10 +199,7 @@ html {
   .c-about,
   .c-projects,
   .c-contact {
-    padding-top: @header-extra-small-height;
-
     &__container {
-      min-height: @container-height-header-extra-small;
       padding: @size-s @size-l;
     }
   }
