@@ -2,12 +2,15 @@
 
 .c-footer {
   display: none;
-  background-color: #color[dark];
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: @size-xl;
+  background-color: aqua;
 
   &__container {
     align-items: center;
-    border-top: 1px solid rgba(#fff, .1);
-    color: #color[light];
+    color: @color-light;
     display: flex;
     justify-content: space-between;
     padding: @size-xs @size-xxl;

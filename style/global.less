@@ -62,102 +62,100 @@
 @container-height-header-large: calc(100vh - @header-large-height);
 @container-height-header-extra-large: calc(100vh - @header-extra-large-height);
 
+// card size
+@card-width: 326px;
+@card-height: 384px;
+
 // colors
-#color() {
-  dark: #000000;
-  error: #C74D44;
-  highlight: #2AB0DE;
-  light: #ffffff;
-}
-
-#logo-size {
-  .large() {
-    height: @logo-l;
-  }
-
-  .medium() {
-    height: @logo-m;
-  }
-
-  .small() {
-    height: @logo-s;
-  }
-}
+@color-dark: #000000;
+@color-light: #ffffff;
 
 #text-theme {
-  .default() {
+  .text() {
     font-family: @text-primary-font;
     font-weight: @text-regular
   }
 
-  .text-xxxl {
-    .default();
+  .heading-large {
+    .text();
 
-    font-size: @text-xxxl;
+    font-size: 3rem; // 48px
   }
 
-  .text-xxl {
-    .default();
+  .heading-medium {
+    .text();
 
-    font-size: @text-xxl;
+    font-size: 2rem; // 32px
   }
 
-  .text-xl {
-    font-size: @text-xl;
+  .heading-small {
+    font-size: 1.5rem; // 24px
   }
 
-  .text-m {
-    font-size: @text-m;
+  .body-large {
+    font-size: 1.25rem; // 20px
   }
 
-  .text-s {
-    font-size: @text-s;
-    line-height: @text-xl;
+  .body-medium {
+    font-size: 1.125rem; // 18px
+  }
+
+  .body-small {
+    font-size: 1rem; // 16px
+    line-height: 1.5;
     font-family: @text-secondary-font;
+  }
+
+  .body-xsmall {
+    font-size: 0.875rem; // 14px
   }
 }
 
-#theme-button {
-  .default() {
-    border-radius: @size-s;
+#theme-btn {
+  .flat() {
+    background-color: @color-light;
+    border-radius: @size-xxs;
     border: none;
-    font-size: @text-l;
-    font-weight: 300;
-    padding: @size-s @size-xl;
-    transition: all 0.6s ease-in;
+    color: @color-dark;
+    display: inline-block;
+    font-size: @text-s;
+    padding: @size-xs @size-s;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s ease;
   }
 
-  .primary-light() {
-    .default();
-
-    background: #color[light];
-    color: #color[dark];
+  .flat-hover() {
+    scale: 1.05;
   }
 
-  .primary-dark() {
-    .default();
-
-    background: #color[dark];
-    color: #color[light];
+  .gradient() {
+    .flat();
+    background: linear-gradient(to right, rgba(@color-light, 1), rgba(@color-light, .5));
   }
 
-  .secondary-light() {
-    .default();
+  .rounded() {
+    .flat();
 
-    background: #color[dark];
-    border: 1px solid #color[light];
-    color: #color[light];
+    border-radius: @size-m;
   }
 
-  .secondary-dark() {
-    .default();
+  .outline() {
+    .flat();
 
-    border: 1px solid #color[dark];
-    color: #color[dark];
+    background-color: transparent;
+    color: @color-light;
+    border: 2px solid @color-light,
+
   }
 
-  .hover() {
-    opacity: 0.4;
+  .ghost() {
+    .outline();
+  }
+
+  .ghost-hover() {
+    background-color: @color-light;
+    color: @color-dark;
   }
 }
 
@@ -173,20 +171,22 @@ html {
   scroll-behavior: smooth;
 
   body {
-    background-color: #color[dark];
-    color: #color[light];
+    background-color: @color-dark;
+    color: @color-light;
     font-family: @text-primary-font;
   }
 }
 
-.c-home, .c-about, .c-projects, .c-contact {
+.c-home,
+.c-about,
+.c-projects,
+.c-contact {
   padding-top: @header-extra-large-height;
   width: 100%;
 
   &__container {
     align-items: center;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     min-height: @container-height-header-extra-large;
     justify-content: center;
     padding: @size-s @size-xxl;
@@ -194,7 +194,10 @@ html {
 }
 
 @media @max1200 {
-  .c-home, .c-about, .c-projects, .c-contact {
+  .c-home,
+  .c-about,
+  .c-projects,
+  .c-contact {
     padding-top: @header-large-height;
 
     &__container {
@@ -204,7 +207,10 @@ html {
 }
 
 @media @max992 {
-  .c-home, .c-about, .c-projects, .c-contact {
+  .c-home,
+  .c-about,
+  .c-projects,
+  .c-contact {
     padding-top: @header-medium-height;
 
     &__container {
@@ -213,14 +219,17 @@ html {
   }
 }
 
-@media @max768{
+@media @max768 {
   html body {
     display: grid;
     grid-template-columns: 1fr;
     overflow-y: inherit;
   }
 
-  .c-home, .c-about, .c-projects, .c-contact {
+  .c-home,
+  .c-about,
+  .c-projects,
+  .c-contact {
     padding-top: @header-small-height;
 
     &__container {
@@ -230,7 +239,10 @@ html {
 }
 
 @media @max576 {
-  .c-home, .c-about, .c-projects, .c-contact {
+  .c-home,
+  .c-about,
+  .c-projects,
+  .c-contact {
     padding-top: @header-extra-small-height;
 
     &__container {

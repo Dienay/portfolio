@@ -4,15 +4,15 @@
   display: none;
 
   &__container {
-    margin: 0 auto;
-    max-width: 1120px;
+    // margin: 0 auto;
+    // max-width: 1120px;
   }
 
   &__title {
     margin-bottom: @size-s;
     text-align: center;
 
-    #text-theme.text-xxxl;
+    #text-theme.heading-large;
   }
 
   &__subtitle {
@@ -31,15 +31,15 @@
   }
 
   &__form field label {
-    color: #color[light];
+    color: @color-light;
     display: block;
     margin-bottom: @size-s;
   }
 
   &__form field input {
-    background-color: #color[dark];
+    background-color: @color-dark;
     border: none;
-    border-bottom: 1px solid #color[light];
+    border-bottom: 1px solid @color-light;
     padding:@size-xs;
     width: 100%;
   }
@@ -59,7 +59,7 @@
   }
 
   &__form-button {
-    #theme-button.primary-light();
+    #theme-btn.flat();
 
     grid-column-end: 3;
     grid-column-start: 1;
@@ -68,7 +68,7 @@
   }
 
   &__form-button:hover {
-    #theme-button.hover();
+    #theme-btn.flat-hover();
   }
 }
 
