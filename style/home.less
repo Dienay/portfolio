@@ -38,12 +38,17 @@ body .c-home {
 
   &__social {
     position: relative;
+    background-color: @color-grey-bg;
+    padding: @size-xs;
+    border-radius: @size-xxs;
+    justify-self: center;
+    box-shadow: @shadow;
 
     &-list::before, &-list::after {
-      border-left: 1px solid rgba(@color-light, 25%);
+      border-left: 1px solid rgba(@color-dark, 50%);
       content: '';
       height: 20vh;
-      left: @size-s;
+      left: @size-m;
       position: absolute;
 
     }
@@ -56,7 +61,6 @@ body .c-home {
     }
 
     &-item {
-      border-radius: 2px;
       padding-bottom: @size-s;
 
       &:last-child {
@@ -69,6 +73,8 @@ body .c-home {
     }
 
     &-icon {
+      border-radius: @size-xxs;
+      box-shadow: @shadow;
       display: block;
       height: @size-l;
       width: @size-l;
