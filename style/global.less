@@ -71,44 +71,74 @@
 // box shadow
 @shadow: 2px 2px 4px 2px rgba(@color-dark, 30%);
 #text-theme {
-  .text() {
-    font-family: @text-primary-font;
-    font-weight: @text-regular
+  // Head style
+  .heading-base() {
+    font-family: @font-title;
+    line-height: 1.5;
   }
 
   .heading-large {
-    .text();
+    .heading-base();
 
-    font-size: 3rem; // 48px
-    font-weight: @text-medium;
+    font-size: @font-h-l; // 64px
   }
 
   .heading-medium {
-    .text();
+    .heading-base();
 
-    font-size: 2rem; // 32px
+    font-size: @font-h-m; // 48px
+    font-weight: @font-semi-bold;
   }
 
   .heading-small {
-    font-size: 1.5rem; // 24px
+    font-size: @font-h-s; // 32px
+    font-family: @font-b-subtitle;
+    font-weight: @font-regular;
+  }
+
+  // Body style
+  .body-base() {
+    font-family: @font-body;
+    line-height: 1.5;
+    font-weight: @font-regular;
+  }
+
+  .body-extra-large {
+    .body-base();
+
+    font-size: @font-b-xl; // 24px
   }
 
   .body-large {
-    font-size: 1.25rem; // 20px
+    .body-base();
+
+    font-size: @font-b-l; // 20px
   }
 
   .body-medium {
-    font-size: 1.125rem; // 18px
+    .body-base();
+
+    font-size: @font-b-m; // 18px
   }
 
-  .body-small {
-    font-size: 1rem; // 16px
-    line-height: 1.5;
-    font-family: @text-secondary-font;
+  .body-normal {
+    .body-base();
+
+    font-size: @font-b-s; // 16px
   }
 
-  .body-xsmall {
-    font-size: 0.875rem; // 14px
+  // Labe style
+  .label-base() {
+    font-family: @font-b-label;
+    text-transform: uppercase;
+  }
+
+  .label-normal {
+    font-size: @font-b-s; // 16px
+  }
+
+  .label-small {
+    font-size: @font-l-s; // 14px
   }
 }
 
