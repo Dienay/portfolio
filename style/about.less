@@ -10,7 +10,7 @@ body .c-about {
   }
 
   &__title {
-    #text-theme.heading-large;
+    #text-theme.heading-medium;
 
     grid-column-start: 1;
     grid-column-end: 3;
@@ -22,7 +22,7 @@ body .c-about {
     max-width: 576px;
 
     &__subtitle {
-      #text-theme.heading-medium();
+      #text-theme.heading-small();
 
       margin-bottom: @size-l;
     }
@@ -33,7 +33,7 @@ body .c-about {
     justify-self: flex-end;
 
     &__text {
-      #text-theme.body-small;
+      #text-theme.body-normal();
 
       margin-bottom: @size-m;
       text-indent: 2em;
@@ -74,7 +74,7 @@ body .c-about {
 @media @max992 {
   body .c-about {
     &__title {
-      font-size: @text-xxl;
+      font-size: @font-h-s;
       margin-bottom: @size-l;
     }
 
