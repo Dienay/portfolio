@@ -7,15 +7,15 @@ body .c-home {
   
   &__container {
     align-items: center;
-    display: grid;
-    grid-template-columns: 1fr @size-xxl;
-    padding: @size-s;
+    display: flex;
+    flex-direction: column;
+    padding: @size-s @size-l;
   }
 
-  &__about {
+  &__intro {
     align-items: center;
     display: flex;
-    height: calc(48vh + @size-xxl + @size-s);
+    min-height: calc(48vh + @size-xxl + @size-s);
     justify-content: center;
 
     &-container {
@@ -23,35 +23,61 @@ body .c-home {
       text-align: center;
     }
 
-    &-presentation {
+    &-name {
       #text-theme.heading-large();
-
-      margin-bottom:@size-xxl;
     }
 
-    &-description {
-      #text-theme.body-small;
-      text-align: justify;
-      text-indent: 2em;
+    &-position {
+      #text-theme.heading-small();
+
+      margin: @size-l 0;
+      color: @color-primary;
+    }
+
+    &-text {
+      #text-theme.body-extra-large();
+    }
+
+    &-cta {
+      display: flex;
+      justify-content: center;
+      margin-top: @size-xl;
+    }
+
+    &-button {
+      #theme-btn.flat();
+
+      display: flex;
+      gap: @size-xs;
+      justify-content: space-between;
+      width: max-content;
+
+      &::after {
+          background: url("../img/icons/down.svg");
+          content: "";
+          display: inline-block;
+          height: 24px;
+          width: 24px;
+      }
     }
   }
 
   &__social {
-    position: relative;
-    background-color: @color-grey-bg;
-    padding: @size-xs;
     border-radius: @size-xxs;
     justify-self: center;
-    box-shadow: @shadow;
+    position: absolute;
+    right: @size-l;
 
-    &-list::before, &-list::after {
+    &-list::before,
+    &-list::after {
       border-left: 1px solid rgba(@color-dark, 50%);
       content: '';
       height: 20vh;
-      left: @size-m;
+      left: @size-s;
       position: absolute;
 
     }
+
     &-list::before {
       top: -24vh;
     }
@@ -74,6 +100,7 @@ body .c-home {
 
     &-icon {
       border-radius: @size-xxs;
+      background-color: @color-grey-bg;
       box-shadow: @shadow;
       display: block;
       height: @size-l;
@@ -84,41 +111,52 @@ body .c-home {
 
 @media @max1200 {}
 
-@media @max992 {}
-
-@media @max768{
+@media @max992 {
   body .c-home {
-    &__container {
-      grid-template-columns: 1fr;
-    }
-
     &__social {
-      grid-row-start: 2;
-      justify-self: center;
-      align-self: baseline;
+      position: relative;
+      right: 0;
 
-      &-list::before, &-list::after {
+      &-list::before,
+      &-list::after {
         display: none;
       }
 
       &-list {
         display: flex;
-        gap: @size-l;
+        gap: @size-s;
+      }
+
+      &-item {
+        padding-bottom: 0;
       }
     }
 
-    &__about {
-      height: 48vh;
+    &__intro {
+      &-container {
+        margin-left: 0;
+      }
     }
 
-    &__about-hello {
-      font-size: @text-xxl;
+  }
+}
+
+@media @max768 {
+  body .c-home {
+    &__intro-hello {
+      font-size: @font-h-s;
     }
 
-    &__about-presentation {
-      font-size: @text-xxl;
+    &__intro-presentation {
+      font-size: @font-h-s;
     }
   }
 }
 
-@media @max576 {}
+@media @max576 {
+  body .c-home {
+    &__social {
+      margin-top: @size-s;
+    }
+  }
+}
