@@ -19,7 +19,7 @@ body .c-home {
     justify-content: center;
 
     &-container {
-      max-width: 800px;
+      // max-width: 800px;
       text-align: center;
     }
 
@@ -42,6 +42,7 @@ body .c-home {
       display: flex;
       justify-content: center;
       margin-top: @size-xl;
+      margin-bottom: @size-l;
     }
 
     &-button {
@@ -98,7 +99,7 @@ body .c-home {
 
 @media @max1200 {}
 
-@media @max992 {
+@media @max768 {
   body .c-home {
     &__social {
       position: relative;
@@ -120,22 +121,17 @@ body .c-home {
     }
 
     &__intro {
-      &-container {
-        margin-left: 0;
+      &-name {
+        font-size: @font-h-m;
       }
-    }
 
-  }
-}
+      &-position {
+        font-size: @font-b-xl;
+      }
 
-@media @max768 {
-  body .c-home {
-    &__intro-hello {
-      font-size: @font-h-s;
-    }
-
-    &__intro-presentation {
-      font-size: @font-h-s;
+      &-text {
+        font-size: @font-b-m;
+      }
     }
   }
 }
