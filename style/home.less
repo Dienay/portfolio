@@ -45,20 +45,7 @@ body .c-home {
     }
 
     &-button {
-      #theme-btn.flat();
-
-      display: flex;
-      gap: @size-xs;
-      justify-content: space-between;
-      width: max-content;
-
-      &::after {
-          background: url("../img/icons/down.svg");
-          content: "";
-          display: inline-block;
-          height: 24px;
-          width: 24px;
-      }
+      #theme-btn.flat-icon("../img/icons/down.svg");
     }
   }
 

@@ -162,6 +162,24 @@
     transition: all .3s ease;
   }
 
+  .flat-icon(@urlIcon) {
+    .flat();
+
+    box-shadow: @shadow;
+    display: flex;
+    gap: @size-xs;
+    justify-content: space-between;
+    width: max-content;
+
+    &::after {
+      background: url(@urlIcon);
+      content: "";
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+    }
+  }
+
   .flat-hover() {
     scale: 1.05;
   }
