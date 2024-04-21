@@ -37,6 +37,7 @@
   &__nav-link {
     #text-theme.body-normal();
 
+    transition: all 0.3s ease-in-out;
     color: @color-light;
     padding: @size-xs @size-m;
     position: relative;
@@ -54,8 +55,10 @@
   }
 
   &__nav-link:hover {
+    color: @color-primary;
+
     &::after {
-      width: calc(100% - @size-xl);
+      background-color:@color-primary;
     }
   }
 
