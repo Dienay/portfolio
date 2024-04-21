@@ -1,10 +1,12 @@
 @import "global";
 
 .c-header {
+  background-color: @color-dark;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+  box-shadow: @shadow-header;
 
   &__container {
     align-items: center;
@@ -33,7 +35,7 @@
   }
 
   &__nav-link {
-    #text-theme.body-small;
+    #text-theme.body-normal();
 
     color: @color-light;
     padding: @size-xs @size-m;
