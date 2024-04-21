@@ -3,20 +3,19 @@
 .c-header {
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 1;
 
   &__container {
     align-items: center;
     display: flex;
-    height: @header-extra-large-height;
+    height: @header-height;
     justify-content: space-between;
     padding: 0 @size-xxl;
   }
 
-
   &__logo {
-    #logo-size.large();
+    height: @logo-size;
 
     img {
       height: 100%;
@@ -34,16 +33,16 @@
   }
 
   &__nav-link {
-    #text-theme.text-s;
+    #text-theme.body-small;
 
-    color: #color[light];
+    color: @color-light;
     padding: @size-xs @size-m;
     position: relative;
 
     &::after {
       transition: all 0.3s ease-in-out;
       content: "";
-      background-color: rgba(#color[light]; 50%);
+      background-color: rgba(@color-light, 50%);
       width: 0;
       height: 1px;
       left: @size-m;
@@ -65,31 +64,10 @@
   }
 }
 
-@media @max1200 {
-  .c-header {
-    &__container {
-      height: @header-large-height;
-    }
-  }
-}
 
-@media @max992 {
-  .c-header {
-    &__container {
-      height: @header-medium-height;
-    }
-
-    &__logo {
-      #logo-size.medium();
-    }
-  }
-}
 
 @media @max768 {
   .c-header {
-    &__container {
-      height: @header-small-height;
-    }
 
     &__menu {
       align-content: space-between;
@@ -102,7 +80,7 @@
       width: @size-l;
 
       &__bar {
-        background-color: #color[light];
+        background-color: @color-light;
         height: calc(@size-xxs - 2px);
         position: absolute;
         transition: all 0.3s ease;
@@ -144,13 +122,13 @@
     }
 
     &__navbar-collapse {
-      background-color: #color[dark];
+      background-color: @color-dark;
       height: 0;
       overflow: hidden;
       position: absolute;
       right: @size-xxl;
       text-align: right;
-      top: @header-small-height;
+      top: @header-height;
       transition: all 0.3s ease-in-out;
       width: @navbar-width;
     }
@@ -166,7 +144,7 @@
 
     &__nav-link {
       align-items: center;
-      border: 1px solid rgba(#color[light]; 50%);
+      border: 1px solid rgba(@color-light, 50%);
       display: flex;
       height: @size-xl;
       justify-content: center;
@@ -177,7 +155,7 @@
     }
 
     &__nav-link--current {
-      border: 4px inset rgba(#color[light]; 50%);
+      border: 4px inset rgba(@color-light, 50%);
     }
   }
 }
@@ -185,17 +163,11 @@
 @media @max576 {
   .c-header {
     &__container {
-      height: @header-extra-small-height;
       padding: 0 @size-l;
-    }
-
-    &__logo {
-      #logo-size.small();
     }
 
     &__navbar-collapse {
       right: @size-l;
-      top: @header-extra-small-height;
     }
   }
 }

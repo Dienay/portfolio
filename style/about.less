@@ -1,25 +1,28 @@
 @import "global";
 
 body .c-about {
+  // display: none;
   &__container {
-    display: grid ;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 120px 1fr;
     align-items: baseline;
     gap: @size-l;
   }
 
   &__title {
-    #text-theme.text-xxxl;
+    #text-theme.heading-large;
 
     grid-column-start: 1;
     grid-column-end: 3;
     text-align: center;
-    align-self: self-end;
+    align-self: center;
   }
 
   &__info, &__skills {
+    max-width: 576px;
+
     &__subtitle {
-      #text-theme.text-xxl();
+      #text-theme.heading-medium();
 
       margin-bottom: @size-l;
     }
@@ -27,11 +30,14 @@ body .c-about {
 
   &__info {
     text-align: justify;
+    justify-self: flex-end;
 
     &__text {
-      #text-theme.text-s;
+      #text-theme.body-small;
 
       margin-bottom: @size-m;
+      text-indent: 2em;
+
 
       strong {
         font-style: italic;
@@ -40,7 +46,7 @@ body .c-about {
       a {
         text-decoration: underline;
         font-style: italic;
-        color: #color[light];
+        color: @color-light;
         cursor: pointer;
       }
     }
@@ -55,7 +61,7 @@ body .c-about {
     }
 
     &__item {
-      background-color: rgba(#color[light]; 25%);
+      background-color: rgba(@color-light, 25%);
       border-radius: @size-xxs;
       padding: @size-xs @size-s;
     }
@@ -75,7 +81,7 @@ body .c-about {
     &__info,
     &__skills {
       &__subtitle {
-        #text-theme.text-xl();
+        #text-theme.heading-small();
 
         margin-bottom: @size-m;
       }
@@ -109,7 +115,7 @@ body .c-about {
     &__info,
     &__skills {
       &__subtitle {
-        #text-theme.text-xl();
+        #text-theme.heading-small();
 
         margin-bottom: @size-s;
       }
@@ -117,3 +123,4 @@ body .c-about {
   }
 }
 
+@media @max576 {}

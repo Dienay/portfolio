@@ -1,6 +1,7 @@
 @import "global";
 
 body .c-home {
+  // display: none;
   &__container {
     align-items: center;
     display: grid;
@@ -11,7 +12,7 @@ body .c-home {
     position: relative;
 
     &-list::before, &-list::after {
-      border-left: 1px solid rgba(#color[light]; 25%);
+      border-left: 1px solid rgba(@color-light, 25%);
       content: '';
       height: 20vh;
       left: @size-s;
@@ -58,20 +59,23 @@ body .c-home {
     }
 
     &-presentation {
-      #text-theme.text-xxxl();
+      #text-theme.heading-large();
 
       margin-bottom:@size-xxl;
     }
 
     &-description {
-      #text-theme.text-s;
+      #text-theme.body-small;
       text-align: justify;
+      text-indent: 2em;
     }
   }
 
 }
 
+@media @max1200 {}
 
+@media @max992 {}
 
 @media @max768{
   body .c-home {
@@ -108,3 +112,4 @@ body .c-home {
   }
 }
 
+@media @max576 {}
