@@ -1,21 +1,32 @@
-const links = document.querySelectorAll(".c-header__nav-link");
+window.addEventListener('load', function () {
+  const links = document.querySelectorAll(".c-header__nav-link");
+  const pages = document.querySelectorAll(".page");
 
-links.forEach(function (link) {
-  link.addEventListener("click", toggleCurrentClass);
-});
+  function findCurrentPageByScroll() {
+    pages.forEach((page: HTMLElement) => {
+      const pageTop = page.offsetTop;
+      const pageHeight = page.clientHeight;
 
-function toggleCurrentClass(event: Event) {
-  const targetElement = event.currentTarget as HTMLElement;
+      if (
+        window.scrollY >= pageTop - pageHeight / pages.length
+        && window.scrollY < pageTop + pageHeight / pages.length
+      ) {
+        let currentPage = page.getAttribute("id");
 
-  if (targetElement.classList.contains("c-header__nav-link--current")) {
-    return
+        links.forEach((link: HTMLElement) => {
+          if (link.getAttribute('href').substring(1) === currentPage) {
+            link.classList.add("c-header__nav-link--current");
+          } else {
+            link.classList.remove("c-header__nav-link--current");
+          }
+        })
+      }
+    })
   }
 
-  links.forEach(function (link) {
-    if (link !== targetElement) {
-      link.classList.remove("c-header__nav-link--current");
-    }
-  });
+  findCurrentPageByScroll();
+  window.addEventListener('scroll', findCurrentPageByScroll);
+});
 
-  targetElement.classList.toggle("c-header__nav-link--current")
-}
+
+
