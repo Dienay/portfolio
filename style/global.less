@@ -23,8 +23,9 @@
 @font-b-xl: 1.5rem; // 24px
 
 @font-h-s: 2rem; // 32px
-@font-h-m: 3rem; // 48px
-@font-h-l: 4rem; // 64px
+@font-h-m: 2.5rem; // 40px
+@font-h-l: 3rem; // 48px
+@font-h-xl: 4rem; // 64px
 
 // font weight
 @font-light: 300;
@@ -80,20 +81,27 @@
     line-height: 1.5;
   }
 
-  .heading-large {
+  .heading-xl {
     .heading-base();
 
-    font-size: @font-h-l; // 64px
+    font-size: @font-h-xl; // 64px
   }
 
-  .heading-medium {
+  .heading-l {
     .heading-base();
 
-    font-size: @font-h-m; // 48px
+    font-size: @font-h-l; // 48px
     font-weight: @font-semi-bold;
   }
 
-  .heading-small {
+  .heading-m {
+    .heading-base();
+
+    font-size: @font-h-m; // 40px
+    font-weight: @font-semi-bold;
+  }
+
+  .heading-s {
     font-size: @font-h-s; // 32px
     font-family: @font-b-subtitle;
     font-weight: @font-regular;
@@ -106,25 +114,25 @@
     font-weight: @font-regular;
   }
 
-  .body-extra-large {
+  .body-xl {
     .body-base();
 
     font-size: @font-b-xl; // 24px
   }
 
-  .body-large {
+  .body-l {
     .body-base();
 
     font-size: @font-b-l; // 20px
   }
 
-  .body-medium {
+  .body-m {
     .body-base();
 
     font-size: @font-b-m; // 18px
   }
 
-  .body-normal {
+  .body-s {
     .body-base();
 
     font-size: @font-b-s; // 16px
@@ -136,11 +144,15 @@
     text-transform: uppercase;
   }
 
-  .label-normal {
+  .label-m {
+    .label-base();
+
     font-size: @font-b-s; // 16px
   }
 
-  .label-small {
+  .label-s {
+    .label-base();
+
     font-size: @font-l-s; // 14px
   }
 }
@@ -242,9 +254,6 @@ html {
     padding: @size-s @size-xxl;
   }
 }
-
-
-
 
 @media @max576 {
   .c-home,

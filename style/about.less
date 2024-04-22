@@ -1,52 +1,51 @@
 @import "global";
 
-body .c-about {
+.c-about {
+  background-color: @color-dark;
+  color: @color-light;
+
   // display: none;
   &__container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 120px 1fr;
-    align-items: baseline;
     gap: @size-l;
   }
 
   &__title {
-    #text-theme.heading-medium;
+    #text-theme.heading-l;
 
-    grid-column-start: 1;
-    grid-column-end: 3;
     text-align: center;
-    align-self: center;
+  }
+
+  &__content {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: @size-l;
+    justify-content: center;
   }
 
   &__info, &__skills {
     max-width: 576px;
 
     &__subtitle {
-      #text-theme.heading-small();
+      #text-theme.heading-s();
 
-      margin-bottom: @size-l;
+      margin-bottom: @size-m;
     }
   }
 
   &__info {
-    text-align: justify;
-    justify-self: flex-end;
-
     &__text {
-      #text-theme.body-normal();
+      #text-theme.body-m();
 
       margin-bottom: @size-m;
-      text-indent: 2em;
-
-
-      strong {
-        font-style: italic;
-      }
+      font-weight: @font-light;
 
       a {
         text-decoration: underline;
-        font-style: italic;
-        color: @color-light;
+        font-weight: @font-bold;
+        color: @color-primary;
         cursor: pointer;
       }
     }
@@ -61,32 +60,20 @@ body .c-about {
     }
 
     &__item {
-      background-color: rgba(@color-light, 25%);
+      #text-theme.label-m();
+
+      background-color: @color-grey-bg;
+      font-weight: @font-medium;
+      color: @color-text;
       border-radius: @size-xxs;
       padding: @size-xs @size-s;
     }
   }
 }
 
-@media @max1200 {
-}
 
 @media @max992 {
-  body .c-about {
-    &__title {
-      font-size: @font-h-s;
-      margin-bottom: @size-l;
-    }
-
-    &__info,
-    &__skills {
-      &__subtitle {
-        #text-theme.heading-small();
-
-        margin-bottom: @size-m;
-      }
-    }
-
+  .c-about {
     &__skills {
       &__list {
         gap: @size-xs;
@@ -101,9 +88,14 @@ body .c-about {
 }
 
 @media @max768 {
-  body .c-about {
+  .c-about {
     &__container {
       display: block;
+    }
+
+    &__title {
+      #text-theme.heading-m();
+      margin-bottom: @size-l;
     }
 
     &__info {
@@ -115,8 +107,6 @@ body .c-about {
     &__info,
     &__skills {
       &__subtitle {
-        #text-theme.heading-small();
-
         margin-bottom: @size-s;
       }
     }

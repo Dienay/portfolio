@@ -1,6 +1,6 @@
 @import "global";
 
-body .c-home {
+.c-home {
   background: url(../img/home-bg.jpg);
   background-size: cover;
   background-position: center center;
@@ -19,23 +19,22 @@ body .c-home {
     justify-content: center;
 
     &-container {
-      // max-width: 800px;
       text-align: center;
     }
 
     &-name {
-      #text-theme.heading-large();
+      #text-theme.heading-xl();
     }
 
     &-position {
-      #text-theme.heading-small();
+      #text-theme.heading-s();
 
       margin: @size-l 0;
       color: @color-primary;
     }
 
     &-text {
-      #text-theme.body-extra-large();
+      #text-theme.body-xl();
     }
 
     &-cta {
@@ -100,7 +99,7 @@ body .c-home {
 @media @max1200 {}
 
 @media @max768 {
-  body .c-home {
+  .c-home {
     &__social {
       position: relative;
       right: 0;
@@ -122,7 +121,7 @@ body .c-home {
 
     &__intro {
       &-name {
-        font-size: @font-h-m;
+        font-size: @font-h-l;
       }
 
       &-position {
@@ -137,7 +136,7 @@ body .c-home {
 }
 
 @media @max576 {
-  body .c-home {
+  .c-home {
     &__social {
       margin-top: @size-s;
     }
