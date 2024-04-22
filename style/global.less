@@ -158,26 +158,49 @@
 }
 
 #theme-btn {
-  .flat() {
-    background-color: @color-primary;
+  .base-button {
+    background: linear-gradient(to right, rgba(@color-primary, 1), rgba(@color-primary, .70));
     border-radius: @size-xxs;
     border: none;
+    box-shadow: @shadow;
     color: @color-light;
     display: inline-block;
     font-family: @font-b-label;
-    font-size: @font-b-l;
     font-weight: @font-regular;
-    padding: @size-s @size-xl;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     transition: all .3s ease;
+
+    &:hover {
+      scale: 1.02;
+    }
+  }
+
+  .flat-l {
+    .base-button;
+
+    font-size: @font-b-l;
+    padding: @size-s @size-xl;
+  }
+
+  .flat-m {
+    .base-button;
+
+    font-size: @font-b-m;
+    padding: @size-xs @size-l;
+  }
+
+  .flat-s {
+    .base-button;
+
+    font-size: @font-b-s;
+    padding: @size-xs @size-m;
   }
 
   .flat-icon(@urlIcon) {
-    .flat();
+    .flat-l;
 
-    box-shadow: @shadow;
     display: flex;
     gap: @size-xs;
     justify-content: space-between;
@@ -192,37 +215,37 @@
     }
   }
 
-  .flat-hover() {
-    scale: 1.05;
-  }
-
-  .gradient() {
-    .flat();
-    background: linear-gradient(to right, rgba(@color-light, 1), rgba(@color-light, .5));
-  }
-
-  .rounded() {
-    .flat();
+  .rounded {
+    .flat-m;
 
     border-radius: @size-m;
   }
 
-  .outline() {
-    .flat();
+  .outline {
+    background: transparent;
+    border: 2px solid @color-primary;
+    color: @color-primary;
 
-    background-color: transparent;
-    color: @color-light;
-    border: 2px solid @color-light,
-
+    &:hover {
+      background: linear-gradient(to right, rgba(@color-primary, 1), rgba(@color-primary, .70));
+      border-color: transparent;
+      color: @color-light;
+    }
   }
 
-  .ghost() {
-    .outline();
+  .outline-l {
+    .flat-l;
+    .outline;
   }
 
-  .ghost-hover() {
-    background-color: @color-light;
-    color: @color-dark;
+  .outline-m {
+    .flat-m;
+    .outline;
+  }
+
+  .outline-s {
+    .flat-s;
+    .outline;
   }
 }
 
