@@ -1,7 +1,6 @@
 const cards = document.querySelectorAll(".c-projects__item");
 const modalsSection = document.querySelector(".c-projects__modals") as HTMLElement;
 const modals = document.querySelectorAll(".c-projects__modal")
-console.log("Modals", modals);
 
 cards.forEach((card: HTMLElement, index) => {
   card.addEventListener("click", (event: Event) => {
