@@ -1,27 +1,29 @@
 @import "global";
 
 .c-contact {
+  background-color: @color-dark;
+  color: @color-light;
+  // display: none;
 
   &__container {
     #template.grid;
   }
 
   &__title {
-    margin-bottom: @size-s;
-    text-align: center;
+    #text-theme.heading-l;
 
-    #text-theme.heading-xl;
+    text-align: center;
   }
 
-  &__subtitle {
-    text-align: center;
+  &__content {
+    width: 100%;
+    max-width: 720px;
+    align-self: baseline;
   }
 
   &__form {
-    display: grid;
-    gap: @size-l;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
   }
 
   &__form field {
@@ -29,6 +31,8 @@
   }
 
   &__form field label {
+    #text-theme.label-m;
+
     color: @color-light;
     display: block;
     margin-bottom: @size-s;
@@ -40,8 +44,13 @@
     border-bottom: 1px solid @color-light;
     padding:@size-xs;
     width: 100%;
-  }
+    outline: none;
+    color: @color-light;
 
+    &::placeholder {
+      color: @color-light;
+    }
+  }
 
   &__form-name {
 
@@ -52,16 +61,13 @@
   }
 
   &__form-message {
-    grid-column-end: 3;
-    grid-column-start: 1;
+    margin-bottom: @size-xxl;
   }
 
   &__form-button {
     #theme-btn.flat-m;
 
-    grid-column-end: 3;
-    grid-column-start: 1;
-    justify-self: center;
+    align-self: center;
     margin-bottom: @size-xxl;
   }
 }
