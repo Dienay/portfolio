@@ -1,7 +1,7 @@
 @import "global";
 
 .c-projects {
-  // display: none;
+  position: relative;
 
   &__container {
     #template.grid;
@@ -15,48 +15,168 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: @size-m;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1080px;
   }
 
   &__item {
+    height: 100vh;
+    max-height: 248px;
+    max-width: 440px;
     position: relative;
-    height: @card-height;
-    width: @card-width;
-    border-radius: @size-s;
-    overflow: hidden;
+    width: 100vw;
+
+    &__image,
+    &__content {
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+    }
 
     &__image {
-      border: 1px solid rgba(@color-light, 20%);
-      position: absolute;
-
       img {
-        clear: both;
-        object-fit: fill;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
       }
     }
 
     &__content {
-      background: linear-gradient(0deg, rgba(@color-dark, 80%) 50%, rgba(@color-dark, 20%) 100%);
-      padding: @size-s;
-      height: max-content;
-      position: absolute;
-      bottom: 0;
+      background-color: rgba(@color-dark, 0%);
+      cursor: pointer;
+      transition: background-color .3s ease-in-out;
+      z-index: 1;
+
+      div {
+        align-items: center;
+        color: @color-light;
+        display: flex;
+        flex-direction: column;
+        height: @size-xxxl;
+        justify-content: center;
+        left: -200px;
+        position: absolute;
+        top: calc(50% - @size-xl);
+        transform: translateX(-100%);
+        transition: left 0.3s ease-in-out, transform 0.3s ease-in-out;
+        width: 120px;
+      }
     }
 
     &__title {
       #text-theme.heading-s;
 
       margin-bottom: @size-xs;
-      text-decoration: underline;
+    }
+
+    &__subtitle {
+      #text-theme.label-m;
+
+      font-weight: @font-medium;
+      margin-bottom: @size-xs;
+    }
+  }
+
+  &__item {
+    &__content {
+      &:hover {
+        background-color: rgba(@color-dark, 75%);
+
+        div {
+          left: calc(50% - 60px);
+          transform: translateX(calc(50% - 60px));
+        }
+      }
+    }
+  }
+
+  &__modals {
+    align-items: center;
+    background-color: rgba(@color-dark, 0.75);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+    z-index: 1;
+
+    &--active {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__modal {
+    background-color: @color-light;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    max-height: 680px;
+    max-width: 640px;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(-200%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 90%;
+
+    &--active {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &__close {
+      #text-theme.label-m;
+
+      align-items: center;
+      background-color: rgba(@color-light, 80%);
+      color: @color-text;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      font-size: @font-b-m;
+      gap: 8px;
+      padding: 8px;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &__image {
+      overflow: hidden;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: @size-m;
+    }
+
+    &__title {
+      #text-theme.label-m;
+
+      font-size: @font-b-xl;
+      margin-bottom: @size-s;
     }
 
     &__description {
+      #text-theme.body-m;
+
       margin-bottom: @size-s;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
     }
 
     &__buttons {
@@ -71,23 +191,8 @@
   }
 }
 
-@media (max-width: 1504px) {
-  .c-projects {
-    &__list {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-}
 
-@media (max-width: 1154px) {
-  .c-projects {
-    &__list {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-}
-
-@media (max-width: 804px){
+@media @max992 {
   .c-projects {
     &__list {
       grid-template-columns: 1fr;
@@ -95,10 +200,14 @@
   }
 }
 
-@media (max-width: 392px) {
+@media @max576 {
   .c-projects {
     &__item {
-      width: 100%;
+      width: calc(100vw - @size-xxl);
+    }
+
+    &__modal {
+      width: 95%;
     }
   }
 }
