@@ -22,7 +22,7 @@
   <link rel="stylesheet/less" type="text/css" href="style/contact.less" />
   <link rel="stylesheet/less" type="text/css" href="style/footer.less" />
 
-  <title>Dienay</title>
+  <title>Dienay Lima</title>
 </head>
 
 <body>
@@ -209,36 +209,35 @@
           </div>
         </section>
       </article>
-    <!-- END PROJECT MODELS -->
-
+      <!-- END PROJECT MODELS -->
+    </section>
+    <!-- END PROJECTS -->
   </section>
-  <!-- END PROJECTS -->
-
   <!-- START CONTACT -->
   <section id="contact" class="c-contact page">
-    <div class="c-contact__container">
-      <h2 class="c-contact__title">Contact</h2>
-      <h3 class="c-contact__subtitle">I'm currently available for freelance work</h3>
-      <div>
-        <h3 class="c-contact__subtitle"></h3>
-        <form class="c-contact__form" action="">
+    <section class="c-contact__container">
+      <h2 class="c-contact__title">Contato</h2>
+      <div class="c-contact__content">
+        <form method="POST" class="c-contact__form" action="https://formsubmit.co/639fb18bae07d3b05a2bf0960f27afe8">
           <field class="c-contact__form-name">
-            <label for="">Your name*</label>
-            <input type="text" placeholder="Enter your name" />
+            <label for="">Nome*</label>
+            <input type="text" name="name" placeholder="Pessoa da Silva" required/>
           </field>
           <field class="c-contact__form-email">
-            <label for="">Your email*</label>
-            <input type="text" placeholder="Enter your email" />
+            <label for="">Email*</label>
+            <input type="text" name="email" placeholder="pessoa@email.com" required/>
           </field>
           <field class="c-contact__form-message">
-            <label for="">Your message*</label>
-            <input type="text" placeholder="Enter your needs" />
-            <!-- <textarea name="" id="" cols="30" rows="10" placeholder="Enter your needs"></textarea> -->
+            <label for="">Mensagem*</label>
+            <input type="text" name="message" placeholder="Podemos conversar?" required/>
           </field>
-          <button class="c-contact__form-button">Send Message</button>
+          <input type="hidden" name="_autoresponse" value="Olá recebi sua mensagem, assim que possível entrarei em contato.">
+          <input type="hidden" name="_next" value="https://dienaylima.com/success.html">
+          <input type="hidden" name="_subject" value="dienaylima.com">
+          <button type="submit" class="c-contact__form-button">Enviar</button>
         </form>
       </div>
-    </div>
+    </section>
   </section>
   <!-- END CONTACT -->
 
