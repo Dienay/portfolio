@@ -1,262 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="description"
+      content="Como Desenvolvedor Full-Stack, graduado em Análise e Desenvolvimento de Sistemas, meu foco está na concepção e implementação de soluções completas para sistemas web. Minha abordagem considera cuidadosamente as necessidades dos usuários, demandas das regras de negócio e viabilidade técnica, buscando resultados visualmente agradáveis e eficientes. Explore meus projetos, entre em contato para oportunidades de colaboração. Tecnologias: HTML, CSS, JavaScript, TypeScript, Design Responsivo, SEO, Angular, React, Less, Sass, Node, Git, Github."
+    />
 
-  <meta name="description"
-    content="Como Desenvolvedor Full-Stack, graduado em Análise e Desenvolvimento de Sistemas, meu foco está na concepção e implementação de soluções completas para sistemas web. Minha abordagem considera cuidadosamente as necessidades dos usuários, demandas das regras de negócio e viabilidade técnica, buscando resultados visualmente agradáveis e eficientes. Explore meus projetos, entre em contato para oportunidades de colaboração. Tecnologias: HTML, CSS, JavaScript, TypeScript, Design Responsivo, SEO, Angular, React, Less, Sass, Node, Git, Github.">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/D-Logo.svg" />
 
-  <!-- favicon -->
-  <link rel="shortcut icon" href="img/D-Logo.svg" />
+    <!-- global styles -->
+    <link rel="stylesheet/less" type="text/css" href="style/global.less" />
+    <!-- styles -->
+    <link rel="stylesheet/less" type="text/css" href="style/header.less" />
+    <link rel="stylesheet/less" type="text/css" href="style/home.less" />
+    <link rel="stylesheet/less" type="text/css" href="style/about.less" />
+    <link rel="stylesheet/less" type="text/css" href="style/projects.less" />
+    <link rel="stylesheet/less" type="text/css" href="style/contact.less" />
+    <link rel="stylesheet/less" type="text/css" href="style/footer.less" />
 
-  <!-- global styles -->
-  <link rel="stylesheet/less" type="text/css" href="style/global.less" />
-  <!-- styles -->
-  <link rel="stylesheet/less" type="text/css" href="style/header.less" />
-  <link rel="stylesheet/less" type="text/css" href="style/home.less" />
-  <link rel="stylesheet/less" type="text/css" href="style/about.less" />
-  <link rel="stylesheet/less" type="text/css" href="style/projects.less" />
-  <link rel="stylesheet/less" type="text/css" href="style/contact.less" />
-  <link rel="stylesheet/less" type="text/css" href="style/footer.less" />
+    <title>Dienay Lima</title>
+  </head>
 
-  <title>Dienay Lima</title>
-</head>
+  <body>
+    <!-- START HEADER -->
+    <header class="c-header">
+      <div class="c-header__container">
+        <a class="c-header__logo" href="#"
+          ><img src="img/D-Logo.svg" alt="Logo D"
+        /></a>
 
-<body>
-  <!-- START HEADER -->
-  <header class="c-header">
-    <div class="c-header__container">
-      <a class="c-header__logo" href="#"><img src="img/D-Logo.svg" alt="Logo D"></a>
+        <button class="c-header__menu" type="button">
+          <span class="c-header__menu__bar"></span>
+          <span class="c-header__menu__bar"></span>
+          <span class="c-header__menu__bar"></span>
+        </button>
 
-      <button class="c-header__menu" type="button">
-        <span class="c-header__menu__bar"></span>
-        <span class="c-header__menu__bar"></span>
-        <span class="c-header__menu__bar"></span>
-      </button>
+        <nav class="c-header__navbar-collapse" id="navbarToggler">
+          <ul class="c-header__nav-links">
+            <li class="c-header__nav-item">
+              <a class="c-header__nav-link" href="#home">Inicio</a>
+            </li>
+            <li class="c-header__nav-item">
+              <a class="c-header__nav-link" href="#about">Sobre</a>
+            </li>
+            <li class="c-header__nav-item">
+              <a class="c-header__nav-link" href="#projects">Projetos</a>
+            </li>
+            <li class="c-header__nav-item">
+              <a class="c-header__nav-link" href="#contact">Contato</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- END HEADER -->
 
-      <nav class="c-header__navbar-collapse" id="navbarToggler">
-        <ul class="c-header__nav-links">
-          <li class="c-header__nav-item">
-            <a class="c-header__nav-link" href="#home">Inicio</a>
-          </li>
-          <li class="c-header__nav-item">
-            <a class="c-header__nav-link" href="#about">Sobre</a>
-          </li>
-          <li class="c-header__nav-item">
-            <a class="c-header__nav-link" href="#projects">Projetos</a>
-          </li>
-          <li class="c-header__nav-item">
-            <a class="c-header__nav-link" href="#contact">Contato</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <!-- END HEADER -->
-
-  <!-- START HOME -->
-  <section id="home" class="c-home page">
-    <section class="c-home__container">
-      <section class="c-home__intro">
-        <div class="c-home__intro-container">
-          <h1 class="c-home__intro-name">Dienay Lima</h1>
-          <h2 class="c-home__intro-position">Desenvolvedor Web Full-Stack</h2>
-          <h3 class="c-home__intro-text">
-            Desenvolvendo soluções para a sua marca
-          </h3>
-          <div class="c-home__intro-cta">
-            <a href="#about" class="c-home__intro-button">Saiba mais</a>
+    <!-- START HOME -->
+    <section id="home" class="c-home page">
+      <section class="c-home__container">
+        <section class="c-home__intro">
+          <div class="c-home__intro-container">
+            <h1 class="c-home__intro-name">Dienay Lima</h1>
+            <h2 class="c-home__intro-position">Desenvolvedor Web Full-Stack</h2>
+            <h3 class="c-home__intro-text">
+              Desenvolvendo soluções para a sua marca
+            </h3>
+            <div class="c-home__intro-cta">
+              <a href="#about" class="c-home__intro-button">Saiba mais</a>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section class="c-home__social">
-        <ul class="c-home__social-list">
-          <li class="c-home__social-item">
-            <a href="https://github.com/Dienay" target="_blank"><img class="c-home__social-icon"
-                src="img/icons/github.svg" alt="github icon" /></a>
-          </li>
-          <li class="c-home__social-item">
-            <a href="https://www.linkedin.com/in/dienaylima/" target="_blank"><img class="c-home__social-icon"
-                src="img/icons/linkedin.svg" alt="LinkedIn icon" /></a>
-          </li>
-        </ul>
-      </section>
-    </section>
-  </section>
-  <!-- END HOME -->
-
-  <!-- START ABOUT -->
-  <section id="about" class="c-about page">
-    <section class="c-about__container">
-      <h2 class="c-about__title">Sobre</h2>
-      <div class="c-about__content">
-        <section class="c-about__info">
-          <h3 class="c-about__info__subtitle">Perfil</h3>
-          <p class="c-about__info__text">
-            Sou graduado em <strong>Análise e Desenvolvimento de Sistemas</strong> pela Estácio e acumulo mais de dois anos de experiência na área.
-          </p>
-          <p class="c-about__info__text">
-            Tenho me dedicado no <strong>desenvolvimento para sistemas web</strong>. Meu foco está na concepção e implementação de soluções completas para aplicações que unem estética e funcionalidade.
-          </p>
-          <p class="c-about__info__text">
-            Minha abordagem considera cuidadosamente as <strong>necessidades dos usuários</strong>, as demandas das <strong>regras de negócio</strong> e <strong>aviabilidade técnica</strong>, buscando sempre alcançar <strong>resultados robustos</strong>, <strong>escaláveis</strong>, <strong>eficientes</strong> e <strong>agradáveis visualmente</strong>, abrangendo o <strong>front-end</strong> e o <strong>back-end</strong>.
-          </p>
-          <p class="c-about__info__text">
-            Confira alguns dos meus projetos <a href="#projects">aqui</a>.
-          </p>
         </section>
 
-        <section class="c-about__skills">
-          <h3 class="c-about__skills__subtitle">Skills</h3>
-          <ul class="c-about__skills__list">
-            <li class="c-about__skills__item">HTML</li>
-            <li class="c-about__skills__item">CSS</li>
-            <li class="c-about__skills__item">JavaScript</li>
-            <li class="c-about__skills__item">TypeScript</li>
-            <li class="c-about__skills__item">Design Responsivo</li>
-            <li class="c-about__skills__item">SEO</li>
-            <li class="c-about__skills__item">Angular</li>
-            <li class="c-about__skills__item">React</li>
-            <li class="c-about__skills__item">Less</li>
-            <li class="c-about__skills__item">Sass</li>
-            <li class="c-about__skills__item">Node</li>
-            <li class="c-about__skills__item">Git</li>
-            <li class="c-about__skills__item">Github</li>
-            <li class="c-about__skills__item">MongoDB</li>
-            <li class="c-about__skills__item">MySQL</li>
-            <li class="c-about__skills__item">Trabalho em Equipe</li>
-            <li class="c-about__skills__item">Adaptabilidade</li>
-            <li class="c-about__skills__item">Aprendizagem Contínua</li>
-            <li class="c-about__skills__item">Foco na Qualidade</li>
-            <li class="c-about__skills__item">Resolução de Conflitos</li>
-            <li class="c-about__skills__item">Atenção aos Detalhes</li>
+        <section class="c-home__social">
+          <ul class="c-home__social-list">
+            <li class="c-home__social-item">
+              <a href="https://github.com/Dienay" target="_blank"
+                ><img
+                  class="c-home__social-icon"
+                  src="img/icons/github.svg"
+                  alt="github icon"
+              /></a>
+            </li>
+            <li class="c-home__social-item">
+              <a href="https://www.linkedin.com/in/dienaylima/" target="_blank"
+                ><img
+                  class="c-home__social-icon"
+                  src="img/icons/linkedin.svg"
+                  alt="LinkedIn icon"
+              /></a>
+            </li>
           </ul>
         </section>
-      </div>
+      </section>
     </section>
-  </section>
-  <!-- END ABOUT -->
+    <!-- END HOME -->
 
-  <!-- START PROJECTS -->
-  <section id="projects" class="c-projects page">
-    <!-- START PROJECT LIST -->
-    <div class="c-projects__container">
-      <h2 class="c-projects__title">Projetos</h2>
-      <ul class="c-projects__list">
-        <li class="c-projects__item">
-          <div class="c-projects__item__image">
-            <img src="./img/portfolio-image.png" alt="miniatura" />
+    <!-- START ABOUT -->
+    <section id="about" class="c-about page">
+      <section class="c-about__container">
+        <h2 class="c-about__title">Sobre</h2>
+        <div class="c-about__content">
+          <section class="c-about__info">
+            <h3 class="c-about__info__subtitle">Perfil</h3>
+            <p class="c-about__info__text">
+              Sou graduado em
+              <strong>Análise e Desenvolvimento de Sistemas</strong> pela
+              Estácio e acumulo mais de dois anos de experiência na área.
+            </p>
+            <p class="c-about__info__text">
+              Tenho me dedicado no
+              <strong>desenvolvimento para sistemas web</strong>. Meu foco está
+              na concepção e implementação de soluções completas para aplicações
+              que unem estética e funcionalidade.
+            </p>
+            <p class="c-about__info__text">
+              Minha abordagem considera cuidadosamente as
+              <strong>necessidades dos usuários</strong>, as demandas das
+              <strong>regras de negócio</strong> e
+              <strong>aviabilidade técnica</strong>, buscando sempre alcançar
+              <strong>resultados robustos</strong>, <strong>escaláveis</strong>,
+              <strong>eficientes</strong> e
+              <strong>agradáveis visualmente</strong>, abrangendo o
+              <strong>front-end</strong> e o <strong>back-end</strong>.
+            </p>
+            <p class="c-about__info__text">
+              Confira alguns dos meus projetos <a href="#projects">aqui</a>.
+            </p>
+          </section>
+
+          <section class="c-about__skills">
+            <h3 class="c-about__skills__subtitle">Skills</h3>
+            <ul class="c-about__skills__list">
+              <li class="c-about__skills__item">HTML</li>
+              <li class="c-about__skills__item">CSS</li>
+              <li class="c-about__skills__item">JavaScript</li>
+              <li class="c-about__skills__item">TypeScript</li>
+              <li class="c-about__skills__item">Design Responsivo</li>
+              <li class="c-about__skills__item">SEO</li>
+              <li class="c-about__skills__item">Angular</li>
+              <li class="c-about__skills__item">React</li>
+              <li class="c-about__skills__item">Less</li>
+              <li class="c-about__skills__item">Sass</li>
+              <li class="c-about__skills__item">Node</li>
+              <li class="c-about__skills__item">Git</li>
+              <li class="c-about__skills__item">Github</li>
+              <li class="c-about__skills__item">MongoDB</li>
+              <li class="c-about__skills__item">MySQL</li>
+              <li class="c-about__skills__item">Trabalho em Equipe</li>
+              <li class="c-about__skills__item">Adaptabilidade</li>
+              <li class="c-about__skills__item">Aprendizagem Contínua</li>
+              <li class="c-about__skills__item">Foco na Qualidade</li>
+              <li class="c-about__skills__item">Resolução de Conflitos</li>
+              <li class="c-about__skills__item">Atenção aos Detalhes</li>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </section>
+    <!-- END ABOUT -->
+
+    <!-- START PROJECTS -->
+    <section id="projects" class="c-projects page">
+      <!-- START PROJECT LIST -->
+      <div class="c-projects__container">
+        <h2 class="c-projects__title">Projetos</h2>
+        <ul class="c-projects__list">
+          <li class="c-projects__item">
+            <div class="c-projects__item__image">
+              <img src="./img/logo-rappi.png" alt="miniatura" />
+            </div>
+            <section class="c-projects__item__content">
+              <div>
+                <h2 class="c-projects__item__title">Rappi</h2>
+                <h3 class="c-projects__item__subtitle">full-stack</h3>
+              </div>
+            </section>
+          </li>
+          <li class="c-projects__item">
+            <div class="c-projects__item__image">
+              <img src="./img/portfolio-image.png" alt="miniatura" />
+            </div>
+            <section class="c-projects__item__content">
+              <div>
+                <h2 class="c-projects__item__title">Portfólio</h2>
+                <h3 class="c-projects__item__subtitle">front-end</h3>
+              </div>
+            </section>
+          </li>
+        </ul>
+      </div>
+      <!-- END PROJECT LIST -->
+
+      <!-- START PROJECT MODELS -->
+      <section class="c-projects__modals c-projects__modals">
+        <article class="c-projects__modal c-projects__modal">
+          <span class="c-projects__modal__close">x</span>
+          <div class="c-projects__modal__image">
+            <img src="./img/logo-rappi.png" alt="miniatura" />
           </div>
-          <section class="c-projects__item__content">
-            <div>
-              <h2 class="c-projects__item__title">Rappi</h2>
-              <h3 class="c-projects__item__subtitle">full-stack</h3>
+          <section class="c-projects__modal__content">
+            <h2 class="c-projects__modal__title">Rappi</h2>
+            <p class="c-projects__modal__description">
+              Aplicação com funcionalidades parecidas com as do aplicativo de
+              delivery real, possuindo telas de loading, login, cadastro,
+              criação e edição de endereço e usuário, carrinho de compras,
+              histórico de compras entre outras funcionalidades.
+            </p>
+            <div class="c-projects__modal__buttons">
+              <a
+                class="c-projects__modal__button"
+                href="https://github.com/Dienay/Rappi-frontend"
+                target="_blank"
+                >front-end</a
+              >
+              <a
+                class="c-projects__modal__button"
+                href="https://github.com/Dienay/Rappi-backend"
+                target="_blank"
+                >back-end</a
+              >
             </div>
           </section>
-        </li>
-        <li class="c-projects__item">
-          <div class="c-projects__item__image">
+        </article>
+        <article class="c-projects__modal">
+          <span class="c-projects__modal__close">x</span>
+          <div class="c-projects__modal__image">
             <img src="./img/portfolio-image.png" alt="miniatura" />
           </div>
-          <section class="c-projects__item__content">
-            <div>
-              <h2 class="c-projects__item__title">Portfólio</h2>
-              <h3 class="c-projects__item__subtitle">front-end</h3>
+          <section class="c-projects__modal__content">
+            <h2 class="c-projects__modal__title">Portfólio</h2>
+            <p class="c-projects__modal__description">
+              Portfólio próprio para exposição de trabalhos, skills, redes
+              sociais e contato.
+            </p>
+            <div class="c-projects__modal__buttons">
+              <a
+                class="c-projects__modal__button"
+                href="https://github.com/Dienay/portfolio"
+                target="_blank"
+                >ver no GitHub</a
+              >
             </div>
           </section>
-        </li>
-      </ul>
-    </div>
-    <!-- END PROJECT LIST -->
-
-    <!-- START PROJECT MODELS -->
-        <section class="c-projects__modals c-projects__modals">
-      <article class="c-projects__modal c-projects__modal">
-        <span class="c-projects__modal__close">x</span>
-        <div class="c-projects__modal__image">
-          <img src="./img/portfolio-image.png" alt="miniatura" />
-        </div>
-        <section class="c-projects__modal__content">
-          <h2 class="c-projects__modal__title">Rappi</h2>
-          <p class="c-projects__modal__description">
-            Aplicação com funcionalidades parecidas com as do aplicativo de delivery real, possuindo telas de loading, login, cadastro, criação e edição de endereço e usuário, carrinho de compras, histórico de compras entre outras funcionalidades.
-          </p>
-          <div class="c-projects__modal__buttons">
-            <a class="c-projects__modal__button" href="https://github.com/Dienay/Rappi-frontend"
-              target="_blank">front-end</a>
-            <a class="c-projects__modal__button" href="https://github.com/Dienay/Rappi-backend"
-              target="_blank">back-end</a>
-          </div>
-        </section>
-      </article>
-      <article class="c-projects__modal">
-        <span class="c-projects__modal__close">x</span>
-        <div class="c-projects__modal__image">
-          <img src="./img/portfolio-image.png" alt="miniatura" />
-        </div>
-        <section class="c-projects__modal__content">
-          <h2 class="c-projects__modal__title">Portfólio</h2>
-          <p class="c-projects__modal__description">
-            Portfólio próprio para exposição de trabalhos, skills, redes sociais e contato.
-          </p>
-          <div class="c-projects__modal__buttons">
-            <a class="c-projects__modal__button" href="https://github.com/Dienay/portfolio" target="_blank">ver no
-              GitHub</a>
-          </div>
-        </section>
-      </article>
-      <!-- END PROJECT MODELS -->
+        </article>
+        <!-- END PROJECT MODELS -->
+      </section>
+      <!-- END PROJECTS -->
     </section>
-    <!-- END PROJECTS -->
-  </section>
-  <!-- START CONTACT -->
-  <section id="contact" class="c-contact page">
-    <section class="c-contact__container">
-      <h2 class="c-contact__title">Contato</h2>
-      <div class="c-contact__content">
-        <form method="POST" class="c-contact__form" action="https://formsubmit.co/639fb18bae07d3b05a2bf0960f27afe8">
-          <field class="c-contact__form-name">
-            <label for="">Nome*</label>
-            <input type="text" name="name" placeholder="Pessoa da Silva" required/>
-          </field>
-          <field class="c-contact__form-email">
-            <label for="">Email*</label>
-            <input type="text" name="email" placeholder="pessoa@email.com" required/>
-          </field>
-          <field class="c-contact__form-message">
-            <label for="">Mensagem*</label>
-            <input type="text" name="message" placeholder="Podemos conversar?" required/>
-          </field>
-          <input type="hidden" name="_autoresponse" value="Olá recebi sua mensagem, assim que possível entrarei em contato.">
-          <input type="hidden" name="_next" value="https://dienaylima.com/success.html">
-          <input type="hidden" name="_subject" value="dienaylima.com">
-          <button type="submit" class="c-contact__form-button">Enviar</button>
-        </form>
+    <!-- START CONTACT -->
+    <section id="contact" class="c-contact page">
+      <section class="c-contact__container">
+        <h2 class="c-contact__title">Contato</h2>
+        <div class="c-contact__content">
+          <form
+            method="POST"
+            class="c-contact__form"
+            action="https://formsubmit.co/639fb18bae07d3b05a2bf0960f27afe8"
+          >
+            <field class="c-contact__form-name">
+              <label for="">Nome*</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Pessoa da Silva"
+                required
+              />
+            </field>
+            <field class="c-contact__form-email">
+              <label for="">Email*</label>
+              <input
+                type="text"
+                name="email"
+                placeholder="pessoa@email.com"
+                required
+              />
+            </field>
+            <field class="c-contact__form-message">
+              <label for="">Mensagem*</label>
+              <input
+                type="text"
+                name="message"
+                placeholder="Podemos conversar?"
+                required
+              />
+            </field>
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Olá recebi sua mensagem, assim que possível entrarei em contato."
+            />
+            <input
+              type="hidden"
+              name="_next"
+              value="https://dienaylima.com/success.html"
+            />
+            <input type="hidden" name="_subject" value="dienaylima.com" />
+            <button type="submit" class="c-contact__form-button">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </section>
+    <!-- END CONTACT -->
+
+    <!-- START footer -->
+    <section id="footer" class="c-footer">
+      <div class="c-footer__container">
+        <p>© 2024 Dienay Lima.</p>
+        <p>Politica de Privacidade</p>
+        <p>Termos & Condições</p>
       </div>
     </section>
-  </section>
-  <!-- END CONTACT -->
+    <!-- END footer -->
 
-  <!-- START footer -->
-  <section id="footer" class="c-footer">
-    <div class="c-footer__container">
-      <p>© 2024 Dienay Lima.</p>
-      <p>Politica de Privacidade</p>
-      <p>Termos & Condições</p>
-    </div>
-  </section>
-  <!-- END footer -->
-
-  <!-- Add LESS -->
-  <script src="js/less.min.js" type="text/javascript"></script>
-  <!-- Add LESS -->
-  <script src="js/menu.js"></script>
-  <script src="js/navigation.js"></script>
-  <script src="js/modal.js"></script>
-</body>
-
+    <!-- Add LESS -->
+    <script src="js/less.min.js" type="text/javascript"></script>
+    <!-- Add LESS -->
+    <script src="js/menu.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/modal.js"></script>
+  </body>
 </html>
