@@ -1,0 +1,35 @@
+---
+layout: default
+title: Artigos
+extra_css:
+  - /assets/css/blog.css
+---
+
+<section class="c-blog page">
+  <div class="c-blog__container">
+    <h2 class="c-blog__title">Artigos</h2>
+
+    {% if site.posts.size == 0 %}
+      <p class="c-blog__empty">Nenhum artigo publicado ainda. Em breve!</p>
+    {% else %}
+      <ul class="c-blog__list">
+        {% for post in site.posts %}
+        <li class="c-blog__item">
+          <a href="{{ post.url }}">
+            {% if post.category %}
+              <span class="c-blog__item__category">{{ post.category }}</span>
+            {% endif %}
+            <h3 class="c-blog__item__title">{{ post.title }}</h3>
+            <time class="c-blog__item__date" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+              {{ post.date | date: "%d de %B de %Y" }}
+            </time>
+            {% if post.description %}
+              <p class="c-blog__item__excerpt">{{ post.description }}</p>
+            {% endif %}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</section>

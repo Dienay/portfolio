@@ -1,0 +1,15 @@
+#_config.yml
+tile: Dienay Lima
+description: Blog e portfólio de Desenvolvedor Web Full-Stack
+url: "https://dienaylima.com"
+lang: pt-BR
+
+# Configurações do blog
+permalink: /artigos/:year/:slug
+paginate: 5
+paginate_path: "/artigos/page:num/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag

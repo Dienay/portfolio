@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title }} | Dienay Lima</title>
+    {% seo %}
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/img/D-Logo.svg" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/global.css" />
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/about.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/projects.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/contact.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/footer.css" />
+
+    {% if page.layout == 'post' %}
+    <link rel="stylesheet" type="text/css" href="/assets/css/post.css" />
+    {% endif %} {% if page.layout == 'post' or page.url == '/artigos/' %}
+    <link rel="stylesheet" type="text/css" href="/assets/css/blog.css" />
+    {% endif %} {% if page.url contains 'politica' %}
+    <link rel="stylesheet" type="text/css" href="/assets/css/privacy.css" />
+    {% endif %}
+  </head>
+  <body>
+    {% include header.html %} {{ content }} {% include footer.html %}
+    <script src="/js/menu.js"></script>
+    <script src="/js/navigation.js"></script>
+    <script src="/js/modal.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+---
+layout: default
+extra_css:
+  - /assets/css/post.css
+---
+<article class="c-post page">
+  <div class="c-post__container">
+    <header class="c-post__header">
+      {% if page.category %}
+        <span class="c-post__category">{{ page.category }}</span>
+      {% endif %}
+      <h1 class="c-post__title">{{ page.title }}</h1>
+      <time class="c-post__date" datetime="{{ page.date | date: '%Y-%m-%d' }}">
+        {{ page.date | date: "%d de %B de %Y" }}
+      </time>
+      {% if page.description %}
+        <p class="c-post__description">{{ page.description }}</p>
+      {% endif %}
+    </header>
+
+    <hr class="c-post__divider" />
+
+    <div class="c-post__content">{{ content }}</div>
+
+    <footer class="c-post__footer">
+      <a class="c-post__back" href="/artigos">← Voltar para artigos</a>
+    </footer>
+  </div>
+</article>
