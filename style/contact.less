@@ -3,14 +3,16 @@
 .c-contact {
   background-color: @color-dark;
   color: @color-light;
-  // display: none;
 
   &__container {
-    #template.grid;
+    #template.grid();
+
+    min-height: 80vh !important;
+    padding-bottom: @size-xxl;
   }
 
   &__title {
-    #text-theme.heading-l;
+    #text-theme.heading-l();
 
     text-align: center;
   }
@@ -26,23 +28,24 @@
     flex-direction: column;
   }
 
-  &__form field {
+  &__form div {
     margin-bottom: @size-l;
   }
 
-  &__form field label {
-    #text-theme.label-m;
+  &__form div label {
+    #text-theme.label-m();
 
     color: @color-light;
     display: block;
     margin-bottom: @size-s;
   }
 
-  &__form field input {
+  &__form div input,
+  &__form div textarea {
     background-color: @color-dark;
     border: none;
     border-bottom: 1px solid @color-light;
-    padding:@size-xs;
+    padding: @size-xs;
     width: 100%;
     outline: none;
     color: @color-light;
@@ -53,11 +56,9 @@
   }
 
   &__form-name {
-
   }
 
   &__form-email {
-
   }
 
   &__form-message {
@@ -65,17 +66,21 @@
   }
 
   &__form-button {
-    #theme-btn.flat-m;
+    #theme-btn.flat-m();
 
     align-self: center;
     margin-bottom: @size-xxl;
   }
 }
 
-@media @max1200 {}
+@media @max1200 {
+}
 
-@media @max992 {}
+@media @max992 {
+}
 
-@media @max768{}
+@media @max768 {
+}
 
-@media @max576 {}
+@media @max576 {
+}
