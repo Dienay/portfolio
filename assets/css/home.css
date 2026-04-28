@@ -515,9 +515,28 @@ html {
   }
 }
 .c-home {
-  background: url(/img/home-bg.jpg);
+  background: url(/img/home-bg.png);
   background-size: cover;
   background-position: center center;
+  position: relative;
+  overflow: hidden;
+}
+.c-home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.75);
+  pointer-events: none;
+  z-index: 1;
+}
+.c-home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 2;
 }
 .c-home__container {
   align-items: center;
@@ -525,38 +544,61 @@ html {
   justify-items: center;
   display: flex;
   flex-direction: column;
-}
-.c-home__intro {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  position: relative;
+  gap: 32px;
+  z-index: 3;
 }
 .c-home__intro-container {
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
   text-align: center;
 }
 .c-home__intro-name {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   font-size: 4rem;
+  color: #ffffff;
+  text-shadow: 0 0 40px rgba(255, 255, 255, 0.25);
 }
 .c-home__intro-position {
   font-size: 2rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  margin: 32px 0;
   color: #eb5424;
+  text-shadow: 0 0 50px rgba(235, 84, 36, 0.5);
 }
 .c-home__intro-text {
   font-family: "IBM Plex Mono", monospace;
   line-height: 1.5;
   font-weight: 400;
   font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+.c-home__intro-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+.c-home__intro-tag {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  border: 1px solid #ffffff;
+  border-radius: 99px;
+  color: #ffffff;
+  padding: 4px 16px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
 }
 .c-home__intro-cta {
   display: flex;
   justify-content: center;
-  margin-top: 48px;
-  margin-bottom: 32px;
 }
 .c-home__intro-button {
   background: linear-gradient(to right, #eb5424, rgba(235, 84, 36, 0.7));
@@ -577,6 +619,7 @@ html {
   gap: 8px;
   justify-content: space-between;
   width: max-content;
+  box-shadow: 0 0 30px rgba(235, 84, 36, 0.35);
 }
 .c-home__intro-button:hover {
   scale: 1.02;
@@ -596,11 +639,12 @@ html {
 }
 .c-home__social-list::before,
 .c-home__social-list::after {
-  border-left: 1px solid rgba(38, 38, 38, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
   content: "";
   height: 20vh;
   left: 16px;
   position: absolute;
+  z-index: 9999;
 }
 .c-home__social-list::before {
   top: -24vh;
@@ -618,9 +662,8 @@ html {
   padding-bottom: 0;
 }
 .c-home__social-icon {
-  border-radius: 4px;
-  background-color: #d9d9d9;
-  box-shadow: 2px 2px 4px 2px rgba(38, 38, 38, 0.3);
+  border-radius: 8px;
+  background-color: #ffffff;
   display: block;
   height: 32px;
   width: 32px;

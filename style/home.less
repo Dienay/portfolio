@@ -1,47 +1,97 @@
 @import "global";
 
 .c-home {
-  background: url(/img/home-bg.jpg);
+  background: url(/img/home-bg.png);
   background-size: cover;
   background-position: center center;
+  position: relative;
+  overflow: hidden;
+
+  // Overlay escuro para legibilidade
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 26, 26, 0.75);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  // Dot grid sobre o overlay
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    );
+    background-size: 28px 28px;
+    pointer-events: none;
+    z-index: 2;
+  }
 
   &__container {
     #template.flex();
+
+    position: relative;
+    gap: @size-l;
+    z-index: 3;
   }
 
   &__intro {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-
     &-container {
+      #template.flex();
+      gap: @size-l;
       text-align: center;
     }
 
     &-name {
       #text-theme.heading-xl();
+      color: @color-light;
+      text-shadow: 0 0 40px rgba(@color-light, 25%);
     }
 
     &-position {
       #text-theme.heading-s();
 
-      margin: @size-l 0;
       color: @color-primary;
+      text-shadow: 0 0 50px rgba(@color-primary, 50%);
     }
 
     &-text {
       #text-theme.body-xl();
+      color: @color-light;
+      text-shadow: 0 0 30px rgba(@color-light, 10%);
+    }
+
+    &-tags {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: @size-xs;
+      list-style: none;
+    }
+
+    &-tag {
+      #text-theme.label-s();
+
+      border: 1px solid @color-light;
+      border-radius: 99px;
+      color: @color-light;
+      padding: @size-xxs @size-s;
+      text-shadow: 0 0 20px rgba(@color-light, 15%);
     }
 
     &-cta {
       display: flex;
       justify-content: center;
-      margin-top: @size-xl;
-      margin-bottom: @size-l;
     }
 
     &-button {
       #theme-btn.flat-icon("/img/icons/down.svg");
+      box-shadow: 0 0 30px rgba(@color-primary, 35%);
     }
   }
 
@@ -53,11 +103,12 @@
 
     &-list::before,
     &-list::after {
-      border-left: 1px solid rgba(@color-dark, 50%);
+      border-left: 1px solid rgba(@color-light, 50%);
       content: "";
       height: 20vh;
       left: @size-s;
       position: absolute;
+      z-index: 9999;
     }
 
     &-list::before {
@@ -81,9 +132,8 @@
     }
 
     &-icon {
-      border-radius: @size-xxs;
-      background-color: @color-grey-bg;
-      box-shadow: @shadow;
+      border-radius: @size-xs;
+      background-color: @color-light;
       display: block;
       height: @size-l;
       width: @size-l;
