@@ -33,4 +33,4 @@ echo -e "  Acesse: \e]8;;$URL\e\\$URL\e]8;;\e\\"
 echo ""
 
 trap "kill $LESS_WATCH_PID 2>/dev/null" EXIT
-bundle exec jekyll serve --livereload
+bundle exec jekyll serve --livereload --force_polling
