@@ -63,7 +63,8 @@
 @header-height: 64px;
 
 // container height
-@container-height: calc(100vh - @header-height);
+@container-height: 100vh;
+// @container-height: calc(100vh - @header-height);
 
 // card size
 @card-width: 326px;
@@ -299,12 +300,12 @@ html {
 .c-projects,
 .c-contact,
 .c-success {
-  padding-top: @header-height;
+  // padding-top: @header-height;
   width: 100%;
 
   &__container {
     min-height: @container-height;
-    padding: @size-s @size-xxl;
+    padding: @size-xxl;
   }
 }
 

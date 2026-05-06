@@ -495,7 +495,6 @@ html {
 .c-projects,
 .c-contact,
 .c-success {
-  padding-top: 64px;
   width: 100%;
 }
 .c-home__container,
@@ -503,8 +502,8 @@ html {
 .c-projects__container,
 .c-contact__container,
 .c-success__container {
-  min-height: calc(100vh - 64px);
-  padding: 16px 64px;
+  min-height: 100vh;
+  padding: 64px;
 }
 @media (max-width: 576px) {
   .c-home__container,
