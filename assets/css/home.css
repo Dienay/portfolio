@@ -514,7 +514,7 @@ html {
   }
 }
 .c-home {
-  background: url(/img/home-bg.png);
+  background: url("/portfolio/img/home-bg.png");
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -624,7 +624,7 @@ html {
   scale: 1.02;
 }
 .c-home__intro-button::after {
-  background: url("/img/icons/down.svg");
+  background: url("/portfolio/img/icons/down.svg");
   content: "";
   display: inline-block;
   height: 24px;

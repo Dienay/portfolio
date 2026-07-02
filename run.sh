@@ -1,6 +1,6 @@
 #!/bin/bash
 
-URL="http://localhost:4000"
+URL="http://localhost:4000/portfolio/"
 
 echo ""
 echo "  Compilando Less..."

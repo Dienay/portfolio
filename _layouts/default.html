@@ -6,30 +6,70 @@
     <title>{{ page.title }} | Dienay Lima</title>
     {% seo %}
     <!-- favicon -->
-    <link rel="shortcut icon" href="/img/D-Logo.svg" />
+    <link rel="shortcut icon" href="{{ '/img/D-Logo.svg' | relative_url }}" />
 
     <!-- global styles -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/global.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ '/assets/css/global.css' | relative_url }}"
+    />
     <!-- styles -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/header.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/home.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/about.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/projects.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/contact.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/css/footer.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ '/assets/css/header.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ '/assets/css/home.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ '/assets/css/about.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ '/assets/css/projects.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ '/assets/css/contact.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ '/assets/css/footer.css' | relative_url }}"
+    />
 
     {% if page.layout == 'post' %}
-    <link rel="stylesheet" type="text/css" href="/assets/css/post.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ '/assets/css/post.css' | relative_url }}"
+    />
     {% endif %} {% if page.layout == 'post' or page.url == '/artigos/' %}
-    <link rel="stylesheet" type="text/css" href="/assets/css/blog.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ '/assets/css/blog.css' | relative_url }}"
+    />
     {% endif %} {% if page.url contains 'politica' %}
-    <link rel="stylesheet" type="text/css" href="/assets/css/privacy.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ '/assets/css/privacy.css' | relative_url }}"
+    />
     {% endif %}
   </head>
   <body>
     {% include header.html %} {{ content }} {% include footer.html %}
-    <script src="/js/menu.js"></script>
-    <script src="/js/navigation.js"></script>
-    <script src="/js/modal.js"></script>
+    <script src="{{ '/js/menu.js' | relative_url }}"></script>
+    <script src="{{ '/js/navigation.js' | relative_url }}"></script>
+    <script src="{{ '/js/modal.js' | relative_url }}"></script>
   </body>
 </html>
