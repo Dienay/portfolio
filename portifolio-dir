@@ -1,0 +1,78 @@
+portifolio/
+│
+├── \_includes/
+│ ├── footer.html
+│ └── header.html
+│
+├── \_layouts/
+│ ├── default.html
+│ └── post.html
+│
+├── \_posts/
+│ └── 2026-05-06-meu-primeiro-artigo.md
+│
+├── .github/
+│ └── workflows/
+│ └── deploy.yml
+│
+├── artigos/
+│ └── index.html
+│
+├── assets/
+│ └── css/
+│ ├── about.css
+│ ├── blog.css
+│ ├── contact.css
+│ ├── footer.css
+│ ├── global.css
+│ ├── header.css
+│ ├── home.css
+│ ├── post.css
+│ ├── privacy.css
+│ ├── projects.css
+│ └── success.css
+│
+├── files/
+│ └── profile.pdf
+│
+├── img/
+│ ├── icons/
+│ │ ├── down.svg
+│ │ ├── github.svg
+│ │ └── linkedin.svg
+│ ├── D-Logo.svg
+│ ├── home-bg.png
+│ ├── logo-rangos.svg
+│ └── portfolio-image.png
+│
+├── js/
+│ ├── button.js
+│ ├── menu.js
+│ ├── modal.js
+│ └── navigation.js
+│
+├── style/
+│ ├── about.less
+│ ├── blog.less
+│ ├── contact.less
+│ ├── footer.less
+│ ├── global.less
+│ ├── header.less
+│ ├── home.less
+│ ├── post.less
+│ ├── privacy.less
+│ ├── projects.less
+│ └── success.less
+│
+├── \_config.yml
+├── .editorconfig
+├── .gitignore
+├── CNAME
+├── Gemfile
+├── Gemfile
+├── index.html
+├── lista-de-projetos.html
+├── politica-de-privacidade.html
+├── README.md
+├── run.sh
+└── success.html
