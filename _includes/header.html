@@ -33,7 +33,9 @@
           >
         </li>
         <li class="c-header__nav-item">
-          <a class="c-header__nav-link" href="{{ '/artigos' | relative_url }}"
+          <a
+            href="{{ '/artigos' | relative_url }}"
+            class="c-header__nav-link {% if page.url == '/artigos/' or page.layout == 'post' %}c-header__nav-link--current{% endif %}"
             >Blog</a
           >
         </li>
