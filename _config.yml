@@ -1,7 +1,7 @@
 #_config.yml
 tile: Dienay Lima
 description: Blog e portfólio de Desenvolvedor Web Full-Stack
-url: "https://dienay.github.io/portfolio"
+url: "https://dienay.github.io"
 baseurl: "/portfolio"
 lang: pt-BR
 

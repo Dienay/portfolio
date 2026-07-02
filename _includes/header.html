@@ -1,6 +1,8 @@
 <header class="c-header">
   <div class="c-header__container">
-    <a class="c-header__logo" href="/"><img src="/img/D-Logo.svg" alt="Logo D" /></a>
+    <a class="c-header__logo" href="{{ '/' | relative_url }}"
+      ><img src="{{ '/img/D-Logo.svg' | relative_url }}" alt="Logo D"
+    /></a>
 
     <button class="c-header__menu" type="button">
       <span class="c-header__menu__bar"></span>
@@ -11,19 +13,29 @@
     <nav class="c-header__navbar-collapse" id="navbarToggler">
       <ul class="c-header__nav-links">
         <li class="c-header__nav-item">
-          <a class="c-header__nav-link" href="/#home">Inicio</a>
+          <a class="c-header__nav-link" href="{{'/#home' | relative_url }}"
+            >Inicio</a
+          >
         </li>
         <li class="c-header__nav-item">
-          <a class="c-header__nav-link" href="/#about">Sobre</a>
+          <a class="c-header__nav-link" href="{{'/#about' | relative_url }} "
+            >Sobre</a
+          >
         </li>
         <li class="c-header__nav-item">
-          <a class="c-header__nav-link" href="/#projects">Projetos</a>
+          <a class="c-header__nav-link" href="{{'/#projects' | relative_url }}"
+            >Projetos</a
+          >
         </li>
         <li class="c-header__nav-item">
-          <a class="c-header__nav-link" href="/#contact">Contato</a>
+          <a class="c-header__nav-link" href="{{'/#contact' | relative_url }}"
+            >Contato</a
+          >
         </li>
         <li class="c-header__nav-item">
-          <a class="c-header__nav-link" href="/artigos">Blog</a>
+          <a class="c-header__nav-link" href="{{ '/artigos' | relative_url }}"
+            >Blog</a
+          >
         </li>
       </ul>
     </nav>

@@ -1,7 +1,8 @@
 @import "global";
+@baseurl: "/portfolio";
 
 .c-home {
-  background: url(/img/home-bg.png);
+  background: url("@{baseurl}/img/home-bg.png");
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -90,7 +91,7 @@
     }
 
     &-button {
-      #theme-btn.flat-icon("/img/icons/down.svg");
+      #theme-btn.flat-icon("@{baseurl}/img/icons/down.svg");
       box-shadow: 0 0 30px rgba(@color-primary, 35%);
     }
   }

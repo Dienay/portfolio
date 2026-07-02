@@ -4,9 +4,15 @@
       © {% assign year = site.time | date: "%Y" %}{{ year }} Dienay Lima
     </p>
     <nav class="c-footer__nav">
-      <a class="c-footer__nav-link" href="/#about">Sobre</a>
-      <a class="c-footer__nav-link" href="/#contact">Contato</a>
-      <a class="c-footer__nav-link" href="/politica-de-privacidade"
+      <a class="c-footer__nav-link" href="{{'/#about' | relative_url }}"
+        >Sobre</a
+      >
+      <a class="c-footer__nav-link" href="{{'/#contact' | relative_url }}"
+        >Contato</a
+      >
+      <a
+        class="c-footer__nav-link"
+        href="{{'/politica-de-privacidade' | relative_url }}"
         >Política de Privacidade</a
       >
     </nav>

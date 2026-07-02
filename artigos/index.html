@@ -15,7 +15,7 @@ extra_css:
     <ul class="c-blog__list">
       {% for post in site.posts %}
       <li class="c-blog__item">
-        <a href="{{ post.url }}">
+        <a href="{{ post.url | relative_url }}"">
           {% if post.category %}
           <span class="c-blog__item__category">{{ post.category }}</span>
           {% endif %}

@@ -30,7 +30,9 @@ extra_css:
     <div class="c-post__content">{{ content }}</div>
 
     <footer class="c-post__footer">
-      <a class="c-post__back" href="/artigos">← Voltar para artigos</a>
+      <a class="c-post__back" href="{{'/artigos' | relative_url }}"
+        >← Voltar para artigos</a
+      >
 
       <p class="c-post__cta">
         📩 Aberto a oportunidades como QA Júnior ou Backend
