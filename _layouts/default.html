@@ -68,6 +68,9 @@
   </head>
   <body>
     {% include header.html %} {{ content }} {% include footer.html %}
+    <script>
+      window.BASE_URL = "{{ site.baseurl }}";
+    </script>
     <script src="{{ '/js/menu.js' | relative_url }}"></script>
     <script src="{{ '/js/navigation.js' | relative_url }}"></script>
     <script src="{{ '/js/modal.js' | relative_url }}"></script>
