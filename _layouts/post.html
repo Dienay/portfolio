@@ -3,18 +3,25 @@ layout: default
 extra_css:
   - /assets/css/post.css
 ---
+
 <article class="c-post page">
   <div class="c-post__container">
     <header class="c-post__header">
       {% if page.category %}
-        <span class="c-post__category">{{ page.category }}</span>
+      <span class="c-post__category">{{ page.category }}</span>
       {% endif %}
       <h1 class="c-post__title">{{ page.title }}</h1>
       <time class="c-post__date" datetime="{{ page.date | date: '%Y-%m-%d' }}">
         {{ page.date | date: "%d de %B de %Y" }}
       </time>
       {% if page.description %}
-        <p class="c-post__description">{{ page.description }}</p>
+      <p class="c-post__description">{{ page.description }}</p>
+      {% endif %} {% if page.tags %}
+      <div class="c-post__tags">
+        {% for tag in page.tags %}
+        <span class="c-post__tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
       {% endif %}
     </header>
 
@@ -24,6 +31,10 @@ extra_css:
 
     <footer class="c-post__footer">
       <a class="c-post__back" href="/artigos">← Voltar para artigos</a>
+
+      <p class="c-post__cta">
+        📩 Aberto a oportunidades como QA Júnior ou Backend
+      </p>
     </footer>
   </div>
 </article>

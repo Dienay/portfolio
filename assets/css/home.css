@@ -502,6 +502,7 @@ html {
 .c-projects__container,
 .c-contact__container,
 .c-success__container {
+  min-height: 100vh;
   padding: 64px;
 }
 @media (max-width: 576px) {

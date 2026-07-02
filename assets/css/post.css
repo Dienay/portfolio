@@ -502,6 +502,7 @@ html {
 .c-projects__container,
 .c-contact__container,
 .c-success__container {
+  min-height: 100vh;
   padding: 64px;
 }
 @media (max-width: 576px) {
@@ -519,7 +520,7 @@ html {
 .c-post__container {
   margin: 0 auto;
   max-width: 720px;
-  min-height: calc(100vh - 64px);
+  min-height: 100vh;
   padding: 64px 64px;
 }
 .c-post__header {
@@ -557,6 +558,27 @@ html {
   color: #5f5f5f;
   font-style: italic;
   margin-top: 16px;
+  padding-left: 16px;
+  border-left: 2px solid #d9d9d9;
+}
+.c-post__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+.c-post__tag {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  background-color: #d9d9d9;
+  color: #5f5f5f;
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: opacity 0.2s ease;
+}
+.c-post__tag:hover {
+  opacity: 0.7;
 }
 .c-post__divider {
   border: none;
@@ -654,16 +676,30 @@ html {
   border-top: 1px solid #d9d9d9;
   margin-top: 64px;
   padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .c-post__back {
   font-family: "Ubuntu", sans-serif;
   text-transform: uppercase;
   font-size: 0.875rem;
   color: #eb5424;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
 }
 .c-post__back:hover {
   opacity: 0.7;
+  transform: translateX(-2px);
+}
+.c-post__cta {
+  font-family: "IBM Plex Mono", monospace;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 1rem;
+  background-color: #d9d9d9;
+  border-radius: 4px;
+  padding: 16px 24px;
+  color: #5f5f5f;
 }
 @media (max-width: 768px) {
   .c-post__container {
