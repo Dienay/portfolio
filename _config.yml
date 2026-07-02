@@ -2,6 +2,7 @@
 tile: Dienay Lima
 description: Blog e portfólio de Desenvolvedor Web Full-Stack
 url: "https://dienay.github.io/portfolio"
+baseurl: "/portfolio"
 lang: pt-BR
 
 # Configurações do blog
